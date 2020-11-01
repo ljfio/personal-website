@@ -41,6 +41,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://github.com/Developmint/nuxt-webfontloader
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -51,5 +53,12 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+
+  // Webfontloader (https://github.com/Developmint/nuxt-webfontloader)
+  webfontloader: {
+    google: {
+      families: ['Source+Sans+Pro:300,400,700']
+    }
+  },
 }
