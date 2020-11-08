@@ -15,7 +15,9 @@
       <p class="font-light">{{ page.description }}</p>
     </div>
 
-    <div class="" v-if="pages.length"></div>
+    <div class="text-center" v-if="pages.length == 0">
+      No articles to display
+    </div>
 
     <div class="flex flex-row">
       <div v-if="number > 1">
