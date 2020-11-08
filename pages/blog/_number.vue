@@ -21,18 +21,20 @@
       No articles to display
     </div>
 
-    <div class="flex flex-row w-full">
+    <div class="flex flex-row w-full mt-6">
       <div v-if="number > 1">
         <nuxt-link
           :to="{ name: 'blog-number', params: { number: number - 1 } }"
-          class="border rounded px-4 py-4"
+          class="border rounded px-4 py-2"
         >
           Previous
         </nuxt-link>
       </div>
-      <div v-if="more" class="border rounded px-4 py-4">
+
+      <div v-if="more">
         <nuxt-link
           :to="{ name: 'blog-number', params: { number: number + 1 } }"
+          class="border rounded px-4 py-2"
         >
           Next
         </nuxt-link>
