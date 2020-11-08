@@ -65,7 +65,7 @@ export default {
         .where({ published: true })
         .only(["slug"])
         .sortBy("publishedAt", "desc")
-        .surround(pages[limit - 1], { before: 0, after: 1 })
+        .surround(pages[limit - 1].slug)
         .fetch();
 
       if (next) {
