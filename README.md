@@ -1,4 +1,6 @@
-# personal
+# My Personal Website
+
+This is the repository hosting the code for my own personal website coded using [Nuxt](https://nuxtjs.org).
 
 ## Build Setup
 
@@ -17,4 +19,3 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
