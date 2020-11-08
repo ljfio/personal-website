@@ -2,7 +2,9 @@
   <article class="">
     <div class="bg-dark-two text-white">
       <div class="container mx-auto py-10">
-        <h1 class="text-4xl">{{ page.title }}</h1>
+        <h1 class="text-5xl">{{ page.title }}</h1>
+        <h2 class="text-2xl">{{ page.description }}</h2>
+        <h3 class="mt-2">{{ $moment(page.publishedAt).format("LLL") }}</h3>
       </div>
     </div>
     <div class="container mx-auto py-2">
