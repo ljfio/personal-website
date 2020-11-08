@@ -12,11 +12,6 @@
             >Blog</nuxt-link
           >
         </div>
-        <div class="p-4 inline-block">
-          <nuxt-link class="text-white hover:text-brand font-light" to="/projects"
-            >Projects</nuxt-link
-          >
-        </div>
       </div>
       <div class="">
         <div class="p-4 inline-block">
