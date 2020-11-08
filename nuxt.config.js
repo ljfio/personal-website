@@ -13,7 +13,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -57,6 +56,32 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  generate: {
+    fallback: true,
+    async routes() {
+      const limit = 5;
+
+      const { $content } = require('@nuxt/content');
+
+      const articles = await $content("articles")
+        .where({ published: true })
+        .only(['slug'])
+        .fetch();
+
+      const pageCount = Math.ceil(articles / limit);
+
+      const blogPages = ['/blog'];
+
+      for (let pageNumber = 1; pageNumber < pageCount; pageNumber++) {
+        blogPages.push(`/blog/${pageNumber}`);
+      }
+
+      return articles
+        .map(article => `/post/${article.slug}`)
+        .concat(blogPages);
+    }
   },
 
   // Webfontloader (https://github.com/Developmint/nuxt-webfontloader)
