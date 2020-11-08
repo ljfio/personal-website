@@ -76,12 +76,16 @@ export default {
     @apply my-2;
   }
 
+  & ul, & ol {
+    @apply list-inside ml-2;
+  }
+
   & ul {
-    @apply list-inside list-disc;
+    @apply list-disc;
   }
 
   & ol {
-    @apply list-inside list-decimal;
+    @apply list-decimal;
   }
 }
 </style>
