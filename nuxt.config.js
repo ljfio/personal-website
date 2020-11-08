@@ -7,7 +7,9 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'personal',
+    titleTemplate: (chunk) => {
+      return chunk ? `${chunk} - Luke Fisher` : 'Luke Fisher';
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

@@ -97,7 +97,7 @@ export default {
   layout: "splash",
   head() {
     return {
-      title: "Luke Fisher",
+      description: "Luke Fisher's personal website",
     };
   },
 };

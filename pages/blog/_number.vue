@@ -45,6 +45,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: (this.number > 1 ? `Page ${this.number} - ` : "") + "Blog",
+    };
+  },
   async asyncData({ $content, params }) {
     const limit = 5;
 

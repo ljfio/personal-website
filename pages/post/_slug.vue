@@ -15,6 +15,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.page.title,
+    };
+  },
   async asyncData({ $content, params }) {
     const page = await $content("articles", params.slug)
       .where({ published: true })
