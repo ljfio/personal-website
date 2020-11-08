@@ -49,7 +49,7 @@ export default {
     const pages = await $content("articles")
       .where({ published: true })
       .only(["title", "description", "slug"])
-      .sortBy("updatedAt", "desc")
+      .sortBy("publishedAt", "desc")
       .limit(limit)
       .skip(skip)
       .fetch();
@@ -60,7 +60,7 @@ export default {
       const [_, next] = await $content("articles")
         .where({ published: true })
         .only(["slug"])
-        .sortBy("updatedAt", "desc")
+        .sortBy("publishedAt", "desc")
         .surround(pages[limit - 1], { before: 0, after: 1 })
         .fetch();
 
