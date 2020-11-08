@@ -19,7 +19,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: "#70d73e"
+        brand: "#70d73e",
+        dark: {
+          one: "#505050",
+          two: "#868686"
+        }
       },
       fontFamily: {
         sans: ["Source Sans Pro", "sans-serif"]

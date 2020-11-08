@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-black">
+    <div class="bg-dark-one">
       <main-navbar />
     </div>
     <nuxt />

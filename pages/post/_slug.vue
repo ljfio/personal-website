@@ -1,7 +1,7 @@
 <template>
   <article class="">
-    <div class="bg-gray-400">
-      <div class="container mx-auto py-8">
+    <div class="bg-dark-two text-white">
+      <div class="container mx-auto py-10">
         <h1 class="text-4xl">{{ page.title }}</h1>
       </div>
     </div>
