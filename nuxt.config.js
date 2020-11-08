@@ -96,4 +96,10 @@ export default {
       families: ['Source+Sans+Pro:300,400,700']
     }
   },
+
+  moment:{
+    defaultTimezone: 'Europe/London',
+    defaultLocale: 'en-gb',
+    locales: ['en-gb']
+  },
 }
