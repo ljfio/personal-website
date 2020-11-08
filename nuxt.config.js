@@ -46,6 +46,8 @@ export default {
     '@nuxt/content',
     // https://github.com/Developmint/nuxt-webfontloader
     'nuxt-webfontloader',
+    //https://github.com/nuxt-community/sitemap-module#readme
+    '@nuxtjs/sitemap'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -82,6 +84,10 @@ export default {
         .map(article => `/post/${article.slug}`)
         .concat(blogPages);
     }
+  },
+
+  sitemap: {
+    hostname: "https://lukefisher.me"
   },
 
   // Webfontloader (https://github.com/Developmint/nuxt-webfontloader)
