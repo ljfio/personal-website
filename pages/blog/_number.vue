@@ -15,10 +15,24 @@
       <p class="font-light">{{ page.description }}</p>
     </div>
 
-    <div class="" v-if="pages.length == 5">
-      <nuxt-link
-        :to="{ name: 'blog-number', params: { number: number + 1 } }"
-      />
+    <div class="" v-if="pages.length"></div>
+
+    <div class="flex flex-row">
+      <div v-if="number > 1">
+        <nuxt-link
+          :to="{ name: 'blog-number', params: { number: number - 1 } }"
+          class="border rounded px-4 py-4"
+        >
+          Previous
+        </nuxt-link>
+      </div>
+      <div v-if="more" class="border rounded px-4 py-4">
+        <nuxt-link
+          :to="{ name: 'blog-number', params: { number: number + 1 } }"
+        >
+          Next
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -40,9 +54,25 @@ export default {
       .skip(skip)
       .fetch();
 
+    var more = false;
+
+    if (pages.length == limit) {
+      const [_, next] = await $content("articles")
+        .where({ published: true })
+        .only(["slug"])
+        .sortBy("updatedAt", "desc")
+        .surround(pages[limit - 1], { before: 0, after: 1 })
+        .fetch();
+
+      if (next) {
+        more = true;
+      }
+    }
+
     return {
       pages,
       number,
+      more,
     };
   },
 };
