@@ -25,18 +25,18 @@
       <div v-if="number > 1">
         <nuxt-link
           :to="{ name: 'blog-number', params: { number: number - 1 } }"
-          class="border rounded px-4 py-2"
+          class="text-dark-two hover:text-brand"
         >
-          Previous
+          &larr; Previous
         </nuxt-link>
       </div>
 
       <div v-if="more">
         <nuxt-link
           :to="{ name: 'blog-number', params: { number: number + 1 } }"
-          class="border rounded px-4 py-2"
+          class="text-dark-two hover:text-brand"
         >
-          Next
+          Next &rarr;
         </nuxt-link>
       </div>
     </div>

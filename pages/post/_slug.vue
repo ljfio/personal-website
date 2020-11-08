@@ -12,13 +12,21 @@
 
       <div class="mt-10 mb-6 flex flex-row">
         <div class="flex-grow">
-          <nuxt-link :to="{ name: 'post-slug', params: { slug: prev.slug } }" class="text-dark-two hover:text-brand" v-if="prev">
-            &larr; {{prev.title}}
+          <nuxt-link
+            :to="{ name: 'post-slug', params: { slug: prev.slug } }"
+            class="text-dark-two hover:text-brand"
+            v-if="prev"
+          >
+            &larr; {{ prev.title }}
           </nuxt-link>
         </div>
         <div class="">
-          <nuxt-link :to="{ name: 'post-slug', params: { slug: next.slug } }" class="text-dark-two hover:text-brand" v-if="next">
-            {{next.title}} &rarr;
+          <nuxt-link
+            :to="{ name: 'post-slug', params: { slug: next.slug } }"
+            class="text-dark-two hover:text-brand"
+            v-if="next"
+          >
+            {{ next.title }} &rarr;
           </nuxt-link>
         </div>
       </div>
@@ -40,8 +48,8 @@ export default {
 
     const [prev, next] = await $content("articles")
       .where({ published: true })
-      .sortBy('publishedAt', 'desc')
-      .only(['title', 'slug'])
+      .sortBy("publishedAt", "desc")
+      .only(["title", "slug"])
       .surround(page.slug)
       .fetch();
 
