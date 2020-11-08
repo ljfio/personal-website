@@ -94,6 +94,7 @@
 
 <script>
 export default {
+  layout: "splash",
   head() {
     return {
       title: "Luke Fisher",

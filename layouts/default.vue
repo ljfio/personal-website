@@ -1,5 +1,8 @@
 <template>
   <div>
-    <Nuxt />
+    <div class="bg-black">
+      <main-navbar />
+    </div>
+    <nuxt />
   </div>
 </template>
