@@ -14,7 +14,9 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const page = await $content("articles", params.slug).fetch();
+    const page = await $content("articles", params.slug)
+      .where({ published: true })
+      .fetch();
 
     return {
       page,

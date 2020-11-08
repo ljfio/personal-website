@@ -33,6 +33,7 @@ export default {
     const skip = number * limit - limit;
 
     const pages = await $content("articles")
+      .where({ published: true })
       .only(["title", "description", "slug"])
       .sortBy("updatedAt", "desc")
       .limit(limit)
