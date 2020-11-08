@@ -1,6 +1,6 @@
 ---
 title: Azure and the PHP Project
-description: Microsoft's cloud is a pain in the...
+description: Using PHP in Microsoft's cloud is a pain in the...
 publishedAt: 2016-12-04 15:51:00
 published: true
 ---
