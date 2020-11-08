@@ -26,14 +26,16 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
+    const limit = 5;
+
     const number = params.number ?? 1;
 
-    const skip = number * 5 - 5;
+    const skip = number * limit - limit;
 
     const pages = await $content("articles")
       .only(["title", "description", "slug"])
       .sortBy("updatedAt", "desc")
-      .limit(5)
+      .limit(limit)
       .skip(skip)
       .fetch();
 
