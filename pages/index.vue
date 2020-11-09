@@ -1,9 +1,9 @@
 <template>
   <div class="">
-    <div class="head py-12">
+    <div class="head py-6">
       <main-navbar />
 
-      <div class="container mx-auto">
+      <div class="container mx-auto py-6">
         <div class="flex flex-row items-center">
           <img src="~/assets/images/ljf-page.svg" class="h-32 px-4 flex-grow" />
         </div>
@@ -11,7 +11,7 @@
     </div>
     <div class="profile">
       <div class="container mx-auto px-4 py-6">
-        <div class="flex flex-col space-y-6 sm:flex-row sm:space-x-6">
+        <div class="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:space-x-6">
           <div class="xs:w-1/4">
             <img
               src="//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798?s=600"
