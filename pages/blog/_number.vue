@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4">
     <h1 class="text-5xl">Luke's Life Log</h1>
 
-    <div class="mt-2" v-for="page in pages" :key="page.slug">
+    <div class="mt-4 leading-tight" v-for="page in pages" :key="page.slug">
       <h2 class="text-3xl">
         <nuxt-link
           class="hover:text-brand"
@@ -12,7 +12,7 @@
         </nuxt-link>
       </h2>
 
-      <p class="font-light">{{ page.description }}</p>
+      <p class="my-2 font-light">{{ page.description }}</p>
 
       <p>{{ $moment(page.publishedAt).format("LLL") }}</p>
     </div>

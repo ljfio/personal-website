@@ -1,10 +1,10 @@
 <template>
   <article class="">
     <div class="bg-dark-two text-white">
-      <div class="container mx-auto py-10 px-4">
-        <h1 class="text-5xl">{{ page.title }}</h1>
-        <h2 class="text-2xl">{{ page.description }}</h2>
-        <h3 class="mt-2">{{ $moment(page.publishedAt).format("LLL") }}</h3>
+      <div class="container mx-auto py-10 px-4 leading-tight">
+        <h1 class="text-3xl md:text-5xl">{{ page.title }}</h1>
+        <h2 class="my-2 md:text-xl font-light">{{ page.description }}</h2>
+        <h3 class="">{{ $moment(page.publishedAt).format("LLL") }}</h3>
       </div>
     </div>
     <div class="container mx-auto py-4 px-4">
