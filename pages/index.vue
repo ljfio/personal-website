@@ -126,10 +126,10 @@ p {
 }
 
 a {
-  @apply text-brand;
+  @apply text-dark-two;
 
   &:hover {
-    @apply text-gray-500;
+    @apply text-brand;
   }
 }
 </style>
