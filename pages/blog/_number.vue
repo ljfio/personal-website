@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4">
     <h1 class="text-5xl">Luke's Life Log</h1>
 
     <div class="mt-2" v-for="page in pages" :key="page.slug">
