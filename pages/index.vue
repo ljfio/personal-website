@@ -51,8 +51,8 @@
       </div>
     </div>
     <div class="attainment bg-black text-white">
-      <div class="container mx-auto px-4 py-2">
-        <div class="flex flex-col space-y-6 sm:space-x-0 sm:flex-row sm:space-x-6">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:space-x-6">
           <div class="sm:w-1/2">
             <h2 class="text-2xl text-center">Experience</h2>
             <div class="py-2 font-light text-xl leading-none">
