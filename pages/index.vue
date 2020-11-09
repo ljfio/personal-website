@@ -75,6 +75,10 @@
           <div class="sm:w-1/2">
             <h2 class="text-2xl text-center">Achievements</h2>
             <div class="py-2 font-light text-xl leading-none">
+              First Class BSc (Hons) in Computer Science
+              <div class="pt-2 text-sm text-gray-500">Completed first, second and degree years with Distinction</div>
+            </div>
+            <div class="py-2 font-light text-xl leading-none">
               ConocoPhillips Award for Academic Excellence
               <div class="pt-2 text-sm text-gray-500">Attained at RGU for both Year 1 &amp; 2</div>
             </div>
