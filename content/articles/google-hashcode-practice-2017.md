@@ -14,9 +14,9 @@ It is coded in Java and uses a Genetic Algorithm to figure out which is the fitt
 The clock has struck HashCode o'clock and now you are faced with a real life problem that you must solve using your coding skills and problem solving abilities.
 
 You've stepped up to the plate faced with the challenge of splitting a Pizza between your many friends. Simple right?
-Not unless you need to ensure that every friend gets a quadrliateral piece of the hot goodness no larger than `H` and with not less that `L` toppings.
+Not unless you need to ensure that every friend gets a quadrilateral piece of the hot goodness no larger than `H` and with not less that `L` toppings.
 
-As featured in the book The Hitchiker's Guide to the Galaxy by Douglas Adams, the phrase Don't Panic should help soothe your nerves.
+As featured in the book The Hitchhiker's Guide to the Galaxy by Douglas Adams, the phrase Don't Panic should help soothe your nerves.
 This is a big challenge and you're more than capable of solving it, you turned up and now it's your time to shine.
 
 ## Break It Down
@@ -42,7 +42,7 @@ We can now create instances of the `Pizza` with different scenarios (selections)
 
 You can pull out what our `Pizza` could look like by reading the file line by line.
 The first line tells us that we have `rows columns min_topping max_slice` which we store as variables for later use.
-The following lines will tell us where on a (Y, X) our tomatos and mushrooms live.
+The following lines will tell us where on a (Y, X) our tomatoes and mushrooms live.
 
 See `HashCodeSolver.loadFile()` for more details and `HashCodeSolver.storeFile()` for simple saving of our 'output' (arrangement).
 
@@ -62,7 +62,7 @@ See `Pizza.fitness()` for more details.
 
 ## How Big a Slice Exactly?
 
-You can generate a list of factors based on a minimum and maximum number of cells per quadrliateral slice in your set row and columns sized pizza.
+You can generate a list of factors based on a minimum and maximum number of cells per quadrilateral slice in your set row and columns sized pizza.
 The maximum is given for us as a value in the input file and the minimum will be `number of different ingredients * minimum number of ingredients`.
 Loop from the 1 to the size of the Pizza for both rows and columns, call these variables Y and X respectively.
 Multiply your X and Y and ensure that it is within the minimum and maximum cell bounds.
@@ -107,7 +107,7 @@ This isn't the same as counting cards, I swear.
 
 Whichever `Pizza` is the fittest wins, The Hunger Games is over and Peeta & Katniss `Pizza` remain.
 
-This generaton passes and our baby `Pizza` have all grown up.
+This generation passes and our baby `Pizza` have all grown up.
 We can therefore repeat the `breed()` and `mutate()` until we reach our best possible arrangement.
 
 ## Hurray, Pizza!
