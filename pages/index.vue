@@ -45,10 +45,10 @@
             >
               {{ role.title }} at {{ role.company }}
               <div class="pt-2 text-sm text-gray-500">
-                {{ $moment(role.start).format("MMM YYYY") }} -
+                {{ $moment(role.start).format("MMMM YYYY") }} -
                 {{
                   role.finish
-                    ? $moment(role.finish).format("MMM YYYY")
+                    ? $moment(role.finish).format("MMMM YYYY")
                     : "Present"
                 }}
               </div>
