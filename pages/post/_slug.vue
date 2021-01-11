@@ -39,6 +39,13 @@ export default {
   head() {
     return {
       title: this.page.title,
+      meta: [
+        {
+          hid: "descripton",
+          name: "description",
+          content: this.page.description,
+        },
+      ],
     };
   },
   async asyncData({ $content, params }) {
@@ -76,7 +83,8 @@ export default {
     @apply my-2;
   }
 
-  & ul, & ol {
+  & ul,
+  & ol {
     @apply list-inside ml-2;
   }
 
