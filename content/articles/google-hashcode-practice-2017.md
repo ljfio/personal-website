@@ -88,14 +88,14 @@ This will be our Cross Point to swap the `Slice` in one with the `Slice` in anot
 
 See `HashCodeSolver.breed()`.
 
-Ensure that your children aren't 50% pappa `Pizza` and 50% mamma `Pizza` by mutating their genes.
+Ensure that your children aren't 50% papa `Pizza` and 50% mamma `Pizza` by mutating their genes.
 We can do this by swapping out random slices with any of the other valid `Slice` for us to maybe (just) be a fitter `Pizza`.
 We can also remove one or add another extra `Slice` in, if we have not explored all of the pizza space.
 
 See `HashCodeSolver.mutate()`
 
 So now we have the baby `Pizza` out of this generation which are like their parents but not 100% (definitely a little more rebellious).
-We have evolved our `Pizza` to be better or worse than our mamma or pappa `Pizza`.
+We have evolved our `Pizza` to be better or worse than our mamma or papa `Pizza`.
 
 ## The Hunger Games
 
