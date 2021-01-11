@@ -87,7 +87,13 @@ export default {
   layout: "splash",
   head() {
     return {
-      description: "Luke Fisher's personal website",
+      meta: [
+        {
+          hid: "descripton",
+          name: "description",
+          content: "Luke Fisher is a software engineer living and working in Scotland",
+        },
+      ],
     };
   },
   async asyncData({ $content }) {
