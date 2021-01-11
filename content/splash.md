@@ -1,11 +1,11 @@
 ---
 title: Luke Fisher
-description: Applications Developer
+description: DevOps Engineer
 ---
 
-Forward thinking software engineer and designer.
+Forward thinking software architect and engineer.
 
-Working in an agile team of problem solvers, supporting bespoke .NET software solutions.
+Working in an agile team of problem solvers, supporting bespoke software solutions.
 
 Graduated from The Robert Gordon University (RGU) in Aberdeen with a First Class BSc (Hons) in Computer Science.
 
