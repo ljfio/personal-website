@@ -38,26 +38,19 @@
         >
           <div class="sm:w-1/2">
             <h2 class="text-2xl text-center">Experience</h2>
-            <div class="py-2 font-light text-xl leading-none">
-              Applications Developer at Hydrasun
+            <div
+              class="py-2 font-light text-xl leading-none"
+              v-for="role in experience"
+              :key="role.slug"
+            >
+              {{ role.title }} at {{ role.company }}
               <div class="pt-2 text-sm text-gray-500">
-                August 2018 - Present
-              </div>
-            </div>
-            <div class="py-2 font-light text-xl leading-none">
-              Software Engineer at Codify
-              <div class="pt-2 text-sm text-gray-500">
-                June 2015 - August 2018
-              </div>
-            </div>
-            <div class="py-2 font-light text-xl leading-none">
-              Software Developer (Temporary) at University of Aberdeen
-              <div class="pt-2 text-sm text-gray-500">May 2015 - June 2015</div>
-            </div>
-            <div class="py-2 font-light text-xl leading-none">
-              Developer (Student Placement) at Hydrasun
-              <div class="pt-2 text-sm text-gray-500">
-                July 2014 - August 2014
+                {{ $moment(role.start).format("MMM YYYY") }} -
+                {{
+                  role.finish
+                    ? $moment(role.finish).format("MMM YYYY")
+                    : "Present"
+                }}
               </div>
             </div>
           </div>
@@ -99,9 +92,13 @@ export default {
   },
   async asyncData({ $content }) {
     const content = await $content("splash").fetch();
+    const experience = await $content("experience")
+      .sortBy("start", "desc")
+      .fetch();
 
     return {
       content,
+      experience,
     };
   },
 };
