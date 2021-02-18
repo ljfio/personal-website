@@ -1,5 +1,12 @@
 [
     {
+        "slug": "cgi-software-engineer",
+        "title": "Software Engineer",
+        "company": "CGI",
+        "start": "2021-02",
+        "finish": null
+    },
+    {
         "slug": "hydrasun-applications-developer",
         "title": "Applications Developer",
         "company": "Hydrasun",
