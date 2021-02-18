@@ -1,6 +1,6 @@
 ---
 title: Luke Fisher
-description: DevOps Engineer
+description: Software Engineer
 ---
 
 Forward thinking software architect and engineer.

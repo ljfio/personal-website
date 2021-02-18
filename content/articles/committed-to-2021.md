@@ -20,7 +20,7 @@ To start my list of commitments is __Learn More__, which was going to be __Read 
 
 This year I will commit to self-improvement through learning more about technological areas I have an interest in.
 
-This commitment was also driven by my latest role as a DevOps Engineer.
+This commitment was also driven by my latest role.
 This role has required me to expand my existing knowledge and is an area that I believe to be always evolving.
 
 ## Share More
