@@ -56,23 +56,14 @@
           </div>
           <div class="sm:w-1/2">
             <h2 class="text-2xl text-center">Achievements</h2>
-            <div class="py-2 font-light text-xl leading-none">
-              First Class BSc (Hons) in Computer Science
+            <div
+              class="py-2 font-light text-xl leading-none"
+              v-for="achievement in achievements"
+              :key="achievement.slug"
+            >
+              {{ achievement.title }}
               <div class="pt-2 text-sm text-gray-500">
-                Completed first, second and degree years with Distinction
-              </div>
-            </div>
-            <div class="py-2 font-light text-xl leading-none">
-              ConocoPhillips Award for Academic Excellence
-              <div class="pt-2 text-sm text-gray-500">
-                Attained at RGU for both Year 1 &amp; 2
-              </div>
-            </div>
-            <div class="py-2 font-light text-xl leading-none">
-              Award for Innovation at STEM in the Pipeline
-              <div class="pt-2 text-sm text-gray-500">
-                Built working three-phase separator model in 2013 as part of
-                Rock Raiders
+                {{ achievement.description }}
               </div>
             </div>
           </div>
@@ -91,20 +82,25 @@ export default {
         {
           hid: "descripton",
           name: "description",
-          content: "Luke Fisher is a software engineer living and working in Scotland",
+          content:
+            "Luke Fisher is a software engineer living and working in Scotland",
         },
       ],
     };
   },
   async asyncData({ $content }) {
     const content = await $content("splash").fetch();
+
     const experience = await $content("experience")
       .sortBy("start", "desc")
       .fetch();
 
+    const achievements = await $content("achievements").fetch();
+
     return {
       content,
       experience,
+      achievements,
     };
   },
 };

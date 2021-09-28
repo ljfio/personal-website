@@ -1,0 +1,22 @@
+[
+    {
+        "slug": "microsoft",
+        "title": "Microsoft Certification",
+        "description": "Azure Developer Associate and Power Platform Developer Associate"
+    },
+    {
+        "slug": "degree",
+        "title": "First Class BSc (Hons) in Computer Science",
+        "description": "Completed first, second and degree years with Distinction"
+    },
+    {
+        "slug": "conocophillips",
+        "title": "ConocoPhillips Award for Academic Excellence",
+        "description": "Attained at RGU for both Year 1 and 2"
+    },
+    {
+        "slug": "staraward",
+        "title": "Award for Innovation at STEM in the Pipeline",
+        "description": "Built working three-phase separator model in 2013 as part of Rock Raiders"
+    }
+]
