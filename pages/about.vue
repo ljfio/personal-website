@@ -2,7 +2,12 @@
   <div class="mt-8 text-gray-800 dark:text-gray-200">
     <div class="font-semibold text-4xl uppercase">
       <nuxt-link
-        class="text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+        class="
+          text-gray-400
+          dark:text-gray-600
+          hover:text-gray-900
+          dark:hover:text-gray-100
+        "
         to="/"
         >/</nuxt-link
       >

@@ -2,7 +2,12 @@
   <div class="mt-8 text-gray-800 dark:text-gray-200">
     <div class="font-semibold text-4xl uppercase">
       <nuxt-link
-        class="text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+        class="
+          text-gray-400
+          dark:text-gray-600
+          hover:text-gray-900
+          dark:hover:text-gray-100
+        "
         to="/"
         >/</nuxt-link
       >
@@ -24,7 +29,7 @@
           :key="role.slug"
         >
           {{ role.title }} at {{ role.company }}
-          <div class="pt-2 text-sm text-gray-500">
+          <div class="pt-2 text-sm text-gray-600 dark:text-gray-400">
             {{ $moment(role.start).format("MMMM YYYY") }} -
             {{
               role.finish ? $moment(role.finish).format("MMMM YYYY") : "Present"
@@ -41,7 +46,7 @@
           :key="achievement.slug"
         >
           {{ achievement.title }}
-          <div class="pt-2 text-sm text-gray-500">
+          <div class="pt-2 text-sm text-gray-600 dark:text-gray-400">
             {{ achievement.description }}
           </div>
         </div>
