@@ -8,4 +8,4 @@ Architected and developed bespoke solutions within enterprises and in software h
 
 Delivered software for multiple form-factors (desktop, tablet and mobile) using a range of frameworks (UWP / WPF / Xamarin).
 
-Experienced in full-stack web development including the use of modern JavaScript frameworks.
+Experienced in full-stack web development including the use of modern JavaScript frameworks such as Vue.
