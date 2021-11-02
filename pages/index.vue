@@ -54,7 +54,7 @@
             target="_blank"
             class="hover:text-gray-900 dark:hover:text-gray-100"
             href="https://twitter.com/ljf_io"
-            >Tweets</a
+            >Tweet</a
           >
         </li>
         <li>
@@ -62,7 +62,7 @@
             target="_blank"
             class="hover:text-gray-900 dark:hover:text-gray-100"
             href="https://instagram.com/ljfio/"
-            >Snaps</a
+            >Snap</a
           >
         </li>
         <li>
