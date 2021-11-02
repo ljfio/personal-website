@@ -23,11 +23,6 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.trueGray,
-        brand: "#70d73e",
-        dark: {
-          one: "#505050",
-          two: "#868686"
-        }
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"]
