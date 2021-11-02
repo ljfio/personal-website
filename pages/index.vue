@@ -1,81 +1,69 @@
 <template>
-  <div class="">
-    <div class="head py-6">
-      <main-navbar />
-
-      <div class="container mx-auto py-6">
-        <div class="flex flex-row items-center">
-          <img src="~/assets/images/ljf-page.svg" class="h-32 px-4 flex-grow" />
-        </div>
-      </div>
-    </div>
-    <div class="profile">
-      <div class="container mx-auto px-4 py-6">
-        <div
-          class="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:space-x-6"
-        >
-          <div class="xs:w-1/4">
-            <img
-              src="//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798?s=600"
-              alt=""
-              class="grayscale rounded-md"
-            />
-          </div>
-          <div class="xs:w-3/4">
-            <h1 class="text-5xl leading-none mb-2">{{ content.title }}</h1>
-            <h2 class="text-2xl leading-none mb-2">
-              {{ content.description }}
-            </h2>
-            <nuxt-content :document="content"></nuxt-content>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="attainment bg-black text-white">
-      <div class="container mx-auto px-4 py-4">
-        <div
-          class="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:space-x-6"
-        >
-          <div class="sm:w-1/2">
-            <h2 class="text-2xl text-center">Experience</h2>
-            <div
-              class="py-2 font-light text-xl leading-none"
-              v-for="role in experience"
-              :key="role.slug"
-            >
-              {{ role.title }} at {{ role.company }}
-              <div class="pt-2 text-sm text-gray-500">
-                {{ $moment(role.start).format("MMMM YYYY") }} -
-                {{
-                  role.finish
-                    ? $moment(role.finish).format("MMMM YYYY")
-                    : "Present"
-                }}
-              </div>
-            </div>
-          </div>
-          <div class="sm:w-1/2">
-            <h2 class="text-2xl text-center">Achievements</h2>
-            <div
-              class="py-2 font-light text-xl leading-none"
-              v-for="achievement in achievements"
-              :key="achievement.slug"
-            >
-              {{ achievement.title }}
-              <div class="pt-2 text-sm text-gray-500">
-                {{ achievement.description }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="mt-8">
+    <nav>
+      <ul class="text-4xl uppercase font-semibold leading-none space-y-4">
+        <li>
+          <nuxt-link to="/about" class="text-gray-400 hover:text-gray-900"
+            >About</nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link to="/resume" class="text-gray-400 hover:text-gray-900"
+            >Resume</nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link to="/blog" class="text-gray-400 hover:text-gray-900"
+            >Blog</nuxt-link
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="text-gray-400 hover:text-gray-900"
+            href="//linkedin.com/in/ljfio"
+            >Connect</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="text-gray-400 hover:text-gray-900"
+            href="//github.com/ljfio"
+            >Code</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="text-gray-400 hover:text-gray-900"
+            href="//twitter.com/ljf_io"
+            >Tweets</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="text-gray-400 hover:text-gray-900"
+            href="//instagram.com/ljfio/"
+            >Snaps</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="text-gray-400 hover:text-gray-900"
+            href="mailto:hello@ljf.io"
+            >Mail</a
+          >
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
-  layout: "splash",
   head() {
     return {
       meta: [
@@ -88,49 +76,6 @@ export default {
       ],
     };
   },
-  async asyncData({ $content }) {
-    const content = await $content("splash").fetch();
-
-    const experience = await $content("experience")
-      .sortBy("start", "desc")
-      .fetch();
-
-    const achievements = await $content("achievements").fetch();
-
-    return {
-      content,
-      experience,
-      achievements,
-    };
-  },
 };
 </script>
 
-<style lang="postcss" scoped>
-.head {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-    url("~@/assets/images/header-image.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.grayscale {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
-::v-deep .nuxt-content {
-  & p {
-    @apply font-light text-xl leading-tight py-1;
-  }
-
-  & a {
-    @apply text-dark-two;
-
-    &:hover {
-      @apply text-brand;
-    }
-  }
-}
-</style>

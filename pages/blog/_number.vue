@@ -1,42 +1,62 @@
 <template>
-  <div class="container mx-auto px-4">
-    <h1 class="text-5xl">Luke's Life Log</h1>
+  <div class="mt-8 text-gray-800">
+    <div class="font-semibold text-4xl uppercase">
+      <nuxt-link class="text-gray-400 hover:text-gray-900" to="/">/</nuxt-link>
+      <span>Blog</span>
+      <span v-if="number > 1">/ {{ number }}</span>
+    </div>
 
-    <div class="mt-4 leading-tight" v-for="page in pages" :key="page.slug">
-      <h2 class="text-3xl">
+    <div
+      class="my-8 leading-none flex flex-col space-y-2"
+      v-for="page in pages"
+      :key="page.slug"
+    >
+      <h2 class="text-4xl">
         <nuxt-link
-          class="hover:text-brand"
+          class="underline hover:text-gray-400"
           :to="{ name: 'post-slug', params: { slug: page.slug } }"
         >
           {{ page.title }}
         </nuxt-link>
       </h2>
 
-      <p class="my-2 font-light">{{ page.description }}</p>
+      <p class="text-lg">{{ page.description }}</p>
 
-      <p>{{ $moment(page.publishedAt).format("LLL") }}</p>
+      <p class="text-gray-400">{{ $moment(page.publishedAt).fromNow() }}</p>
     </div>
 
     <div class="text-center" v-if="pages.length == 0">
       No articles to display
     </div>
 
-    <div class="flex flex-row w-full mt-6">
-      <div v-if="number > 1">
+    <div
+      class="
+        flex flex-row
+        w-full
+        mt-8
+        font-semibold
+        text-4xl
+        uppercase
+        justify-between
+      "
+    >
+      <div>
         <nuxt-link
           :to="{ name: 'blog-number', params: { number: number - 1 } }"
-          class="text-dark-two hover:text-brand"
+          class="text-gray-400 hover:text-gray-800"
+          v-if="number > 1"
         >
-          &larr; Previous
+          Previous
         </nuxt-link>
       </div>
 
-      <div v-if="more">
+      <div>
         <nuxt-link
           :to="{ name: 'blog-number', params: { number: number + 1 } }"
-          class="text-dark-two hover:text-brand"
+          class="text-gray-400 hover:text-gray-800"
+          v-if="more"
         >
-          Next &rarr;
+          Next
         </nuxt-link>
       </div>
     </div>

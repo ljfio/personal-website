@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -19,6 +21,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        gray: colors.trueGray,
         brand: "#70d73e",
         dark: {
           one: "#505050",
@@ -26,7 +29,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ["Source Sans Pro", "sans-serif"]
+        sans: ["Inter", "sans-serif"]
       }
     },
   },

@@ -1,37 +1,58 @@
 <template>
-  <article class="">
-    <div class="bg-dark-two text-white">
-      <div class="container mx-auto py-10 px-4 leading-tight">
-        <h1 class="text-3xl md:text-5xl">{{ page.title }}</h1>
-        <h2 class="my-2 md:text-xl font-light">{{ page.description }}</h2>
-        <h3 class="">{{ $moment(page.publishedAt).format("LLL") }}</h3>
+  <div class="mt-8 text-gray-800">
+    <div class="font-semibold text-4xl uppercase">
+      <nuxt-link class="text-gray-400 hover:text-gray-900" to="/">/</nuxt-link>
+      <nuxt-link class="text-gray-400 hover:text-gray-900" to="/blog"
+        >Blog</nuxt-link
+      >
+    </div>
+
+    <div class="my-8">
+      <div class="flex leading-none flex-col space-y-2">
+        <h1 class="text-4xl">{{ page.title }}</h1>
+        <h2 class="text-lg">{{ page.description }}</h2>
+        <p class="text-gray-400">
+          {{ $moment(page.publishedAt).fromNow() }}
+        </p>
       </div>
     </div>
-    <div class="container mx-auto py-4 px-4">
+
+    <div class="">
       <nuxt-content :document="page" />
 
-      <div class="mt-10 mb-6 flex flex-row">
-        <div class="flex-grow">
-          <nuxt-link
-            :to="{ name: 'post-slug', params: { slug: prev.slug } }"
-            class="text-dark-two hover:text-brand"
-            v-if="prev"
-          >
-            &larr; {{ prev.title }}
-          </nuxt-link>
-        </div>
-        <div class="">
+      <div
+        class="
+          flex flex-row
+          w-full
+          mt-8
+          font-semibold
+          text-4xl
+          uppercase
+          justify-between
+        "
+      >
+        <div>
           <nuxt-link
             :to="{ name: 'post-slug', params: { slug: next.slug } }"
-            class="text-dark-two hover:text-brand"
+            class="text-gray-400 hover:text-gray-800"
             v-if="next"
           >
-            {{ next.title }} &rarr;
+            Next
+          </nuxt-link>
+        </div>
+
+        <div>
+          <nuxt-link
+            :to="{ name: 'post-slug', params: { slug: prev.slug } }"
+            class="text-gray-400 hover:text-gray-800"
+            v-if="prev"
+          >
+            Previous
           </nuxt-link>
         </div>
       </div>
     </div>
-  </article>
+  </div>
 </template>
 
 <script>
@@ -53,7 +74,7 @@ export default {
       .where({ published: true })
       .fetch();
 
-    const [prev, next] = await $content("articles")
+    const [next, prev] = await $content("articles")
       .where({ published: true })
       .sortBy("publishedAt", "desc")
       .only(["title", "slug"])
@@ -81,6 +102,14 @@ export default {
 
   & p {
     @apply my-2;
+  }
+
+  & a {
+    @apply underline;
+
+    &:hover {
+      @apply text-gray-400;
+    }
   }
 
   & ul,

@@ -93,11 +93,11 @@ export default {
   // Webfontloader (https://github.com/Developmint/nuxt-webfontloader)
   webfontloader: {
     google: {
-      families: ['Source+Sans+Pro:300,400,700']
+      families: ['Inter:300,400,600,700']
     }
   },
 
-  moment:{
+  moment: {
     defaultTimezone: 'Europe/London',
     defaultLocale: 'en-gb',
     locales: ['en-gb']
