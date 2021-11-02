@@ -1,26 +1,41 @@
 <template>
   <div class="mt-8">
     <nav>
-      <ul class="text-4xl uppercase font-semibold leading-none space-y-4">
+      <ul
+        class="
+          text-4xl
+          uppercase
+          font-semibold
+          leading-none
+          space-y-4
+          text-gray-400
+        "
+      >
         <li>
-          <nuxt-link to="/about" class="text-gray-400 hover:text-gray-900"
+          <nuxt-link
+            to="/about"
+            class="hover:text-gray-900 dark:hover:text-gray-100"
             >About</nuxt-link
           >
         </li>
         <li>
-          <nuxt-link to="/resume" class="text-gray-400 hover:text-gray-900"
+          <nuxt-link
+            to="/resume"
+            class="hover:text-gray-900 dark:hover:text-gray-100"
             >Resume</nuxt-link
           >
         </li>
         <li>
-          <nuxt-link to="/blog" class="text-gray-400 hover:text-gray-900"
+          <nuxt-link
+            to="/blog"
+            class="hover:text-gray-900 dark:hover:text-gray-100"
             >Blog</nuxt-link
           >
         </li>
         <li>
           <a
             target="_blank"
-            class="text-gray-400 hover:text-gray-900"
+            class="hover:text-gray-900 dark:hover:text-gray-100"
             href="https://github.com/ljfio"
             >Code</a
           >
@@ -28,7 +43,7 @@
         <li>
           <a
             target="_blank"
-            class="text-gray-400 hover:text-gray-900"
+            class="hover:text-gray-900 dark:hover:text-gray-100"
             href="https://linkedin.com/in/ljfio"
             >Connect</a
           >
@@ -36,7 +51,7 @@
         <li>
           <a
             target="_blank"
-            class="text-gray-400 hover:text-gray-900"
+            class="hover:text-gray-900 dark:hover:text-gray-100"
             href="https://twitter.com/ljf_io"
             >Tweets</a
           >
@@ -44,7 +59,7 @@
         <li>
           <a
             target="_blank"
-            class="text-gray-400 hover:text-gray-900"
+            class="hover:text-gray-900 dark:hover:text-gray-100"
             href="https://instagram.com/ljfio/"
             >Snaps</a
           >
@@ -52,7 +67,7 @@
         <li>
           <a
             target="_blank"
-            class="text-gray-400 hover:text-gray-900"
+            class="hover:text-gray-900 dark:hover:text-gray-100"
             href="mailto:hello@ljf.io"
             >Mail</a
           >

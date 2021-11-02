@@ -1,8 +1,14 @@
 <template>
-  <div class="mt-8 text-gray-800">
+  <div class="mt-8 text-gray-800 dark:text-gray-200">
     <div class="font-semibold text-4xl uppercase">
-      <nuxt-link class="text-gray-400 hover:text-gray-900" to="/">/</nuxt-link>
-      <nuxt-link class="text-gray-400 hover:text-gray-900" to="/blog"
+      <nuxt-link
+        class="text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+        to="/"
+        >/</nuxt-link
+      >
+      <nuxt-link
+        class="text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+        to="/blog"
         >Blog</nuxt-link
       >
     </div>
@@ -34,7 +40,7 @@
         <div>
           <nuxt-link
             :to="{ name: 'post-slug', params: { slug: next.slug } }"
-            class="text-gray-400 hover:text-gray-800"
+            class="text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
             v-if="next"
           >
             Next
@@ -44,7 +50,7 @@
         <div>
           <nuxt-link
             :to="{ name: 'post-slug', params: { slug: prev.slug } }"
-            class="text-gray-400 hover:text-gray-800"
+            class="text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
             v-if="prev"
           >
             Previous

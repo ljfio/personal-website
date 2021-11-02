@@ -1,7 +1,11 @@
 <template>
-  <div class="mt-8 text-gray-800">
+  <div class="mt-8 text-gray-800 dark:text-gray-200">
     <div class="font-semibold text-4xl uppercase">
-      <nuxt-link class="text-gray-400 hover:text-gray-900" to="/">/</nuxt-link>
+      <nuxt-link
+        class="text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+        to="/"
+        >/</nuxt-link
+      >
       <span>Resume</span>
     </div>
 
@@ -73,7 +77,7 @@ export default {
 
 <style lang="postcss" scoped>
 ::v-deep .nuxt-content {
-  @apply text-gray-800;
+  @apply text-gray-800 dark:text-gray-200;
 
   & p {
     @apply my-2;
