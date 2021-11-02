@@ -70,3 +70,21 @@ export default {
   },
 };
 </script>
+
+<style lang="postcss" scoped>
+::v-deep .nuxt-content {
+  @apply text-gray-800;
+
+  & p {
+    @apply my-2;
+  }
+
+  & a {
+    @apply underline;
+
+    &:hover {
+      @apply text-gray-400;
+    }
+  }
+}
+</style>

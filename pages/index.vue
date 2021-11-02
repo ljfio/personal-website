@@ -21,15 +21,7 @@
           <a
             target="_blank"
             class="text-gray-400 hover:text-gray-900"
-            href="//linkedin.com/in/ljfio"
-            >Connect</a
-          >
-        </li>
-        <li>
-          <a
-            target="_blank"
-            class="text-gray-400 hover:text-gray-900"
-            href="//github.com/ljfio"
+            href="https://github.com/ljfio"
             >Code</a
           >
         </li>
@@ -37,7 +29,15 @@
           <a
             target="_blank"
             class="text-gray-400 hover:text-gray-900"
-            href="//twitter.com/ljf_io"
+            href="https://linkedin.com/in/ljfio"
+            >Connect</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="text-gray-400 hover:text-gray-900"
+            href="https://twitter.com/ljf_io"
             >Tweets</a
           >
         </li>
@@ -45,7 +45,7 @@
           <a
             target="_blank"
             class="text-gray-400 hover:text-gray-900"
-            href="//instagram.com/ljfio/"
+            href="https://instagram.com/ljfio/"
             >Snaps</a
           >
         </li>

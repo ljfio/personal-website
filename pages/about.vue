@@ -5,7 +5,7 @@
       <span>About</span>
     </div>
 
-    <nuxt-content :document="content"></nuxt-content>
+    <nuxt-content class="mt-8" :document="content"></nuxt-content>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     };
   },
   async asyncData({ $content }) {
-    const content = await $content("splash").fetch();
+    const content = await $content("about").fetch();
 
     return {
       content,
@@ -28,7 +28,7 @@ export default {
 
 <style lang="postcss" scoped>
 ::v-deep .nuxt-content {
-  @apply mt-8 text-gray-800;
+  @apply text-gray-800;
 
   & p {
     @apply my-2;
