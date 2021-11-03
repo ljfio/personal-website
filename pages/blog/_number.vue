@@ -20,7 +20,7 @@
         </nuxt-link>
       </h2>
 
-      <p class="text-lg">{{ page.description }}</p>
+      <p class="text-lg italic">{{ page.description }}</p>
 
       <p class="text-gray-400 dark:text-gray-600">
         {{ $moment(page.publishedAt).fromNow() }}
