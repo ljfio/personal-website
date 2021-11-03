@@ -13,7 +13,7 @@ Working towards attaining certification in AWS, Azure and Kubernetes.
 Graduated from [Robert Gordon University (RGU)][rgu] in Aberdeen with a First Class BSc (Hons) in Computer Science.
 
 Elected President of the [RGU Computing Society][rgucs] for the 2016-17 and 2017-18 terms.
-Lead organiser for the annual hackathon run by the society, [RGUHack][rguhack].
+Lead organiser for [RGUHack][rguhack], the annual hackathon run by the society.
 
 Strong advocate for digital privacy and data security. Member of both the [EFF][eff] and [ORG][org],
 two organisations standing up to protect your digital rights.
