@@ -1,8 +1,7 @@
 ---
 title: Committed to 2021
 description: An expanded "New Years Resolution(s)" for the second year of the pandemic
-publishedAt: 2021-01-03 10:29:00
-published: true
+published: 2021-01-03 10:29:00
 ---
 
 Starting a new year without the usual celebrations that entail was strange. I feel like we have not left March 2020.

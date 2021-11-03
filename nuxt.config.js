@@ -74,7 +74,6 @@ export default {
       const { $content } = require('@nuxt/content');
 
       const articles = await $content("articles")
-        .where({ published: true })
         .only(['slug'])
         .fetch();
 

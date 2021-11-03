@@ -1,8 +1,7 @@
 ---
 title: Recovering Partitions
 description: When you've slightly formatted the wrong disk during installation
-publishedAt: 2017-01-02 14:52:00
-published: true
+published: 2017-01-02 14:52:00
 ---
 
 ## The Background

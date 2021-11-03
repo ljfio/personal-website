@@ -10,7 +10,7 @@
         <h1 class="text-4xl">{{ page.title }}</h1>
         <h2 class="text-lg italic">{{ page.description }}</h2>
         <p class="text-gray-400 dark:text-gray-600">
-          {{ $moment(page.publishedAt).fromNow() }}
+          {{ $moment(page.published).fromNow() }}
         </p>
       </div>
     </div>
@@ -66,13 +66,10 @@ export default {
     };
   },
   async asyncData({ $content, params }) {
-    const page = await $content("articles", params.slug)
-      .where({ published: true })
-      .fetch();
+    const page = await $content("articles", params.slug).fetch();
 
     const [next, prev] = await $content("articles")
-      .where({ published: true })
-      .sortBy("publishedAt", "desc")
+      .sortBy("published", "desc")
       .only(["title", "slug"])
       .surround(page.slug)
       .fetch();

@@ -1,8 +1,7 @@
 ---
 title: Azure and the PHP Project
 description: Using PHP in Microsoft's cloud is a pain in the...
-publishedAt: 2016-12-04 15:51:00
-published: true
+published: 2016-12-04 15:51:00
 ---
 
 A little bit of an introduction to this post: as part of Web Application Development coursework we were tasked to create a website using PHP and Azure.

@@ -23,7 +23,7 @@
       <p class="text-lg italic">{{ page.description }}</p>
 
       <p class="text-gray-400 dark:text-gray-600">
-        {{ $moment(page.publishedAt).fromNow() }}
+        {{ $moment(page.published).fromNow() }}
       </p>
     </div>
 
@@ -78,9 +78,8 @@ export default {
     const skip = number * limit - limit;
 
     const pages = await $content("articles")
-      .where({ published: true })
-      .only(["title", "description", "slug", "publishedAt"])
-      .sortBy("publishedAt", "desc")
+      .only(["title", "description", "slug", "published"])
+      .sortBy("published", "desc")
       .limit(limit)
       .skip(skip)
       .fetch();
@@ -89,9 +88,8 @@ export default {
 
     if (pages.length == limit) {
       const [_, next] = await $content("articles")
-        .where({ published: true })
         .only(["slug"])
-        .sortBy("publishedAt", "desc")
+        .sortBy("published", "desc")
         .surround(pages[limit - 1].slug)
         .fetch();
 
