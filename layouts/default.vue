@@ -19,7 +19,7 @@
     <nuxt />
 
     <div class="mt-16 text-gray-300 dark:text-gray-700 font-light">
-      &copy; {{ year }}
+      &copy; {{ year }} &bull; {{ commit_ref }}
     </div>
   </div>
 </template>
@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       year: new Date().getFullYear(),
+      commit_ref: process.env.COMMIT_SHA?.substring(0, 7) || "dev",
     };
   },
   head: {
