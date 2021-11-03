@@ -1,8 +1,7 @@
 ---
 title: Self-Hosted GitHub Actions Runner in Docker
 description: How to run your CI/CD pipeline from GitHub using Docker
-publishedAt: 2021-01-11 21:27:00
-published: true
+published: 2021-01-11 21:27:00
 ---
 
 Continuous Integration / Continuous Deployment (CI/CD) is an approach to building and testing software continuously while deploying any successful builds of the software to a live production environment when appropriate. This is a solution applied in modern software development to increase developer velocity.
@@ -39,7 +38,7 @@ N.B. These commands will change as new versions of the runner are released, ensu
 
 Find a directory to download the Actions runner software into and run the following commands. This will download and extract the latest runner for you to use.
 
-```
+```bash
 mkdir actions-runner && cd actions-runner
 
 curl -O -L https://github.com/actions/runner/releases/download/v2.275.1/actions-runner-linux-x64-2.275.1.tar.gz
@@ -51,7 +50,7 @@ tar xzf ./actions-runner-linux-x64-2.275.1.tar.gz
 
 A runner instance is required to be registered with GitHub and can be done but running the `config.sh` script with the appropriate URL and token generated under the settings of the organisation or repository.
 
-```
+```bash
 ./config.sh --url https://github.com/organisation --token ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ```
 
@@ -59,19 +58,19 @@ A runner instance is required to be registered with GitHub and can be done but r
 
 To run the runner, invoke the `run.sh` script. This will connect to GitHub and await for jobs to run.
 
-```
+```bash
 ./run.sh
 ```
 
 The workflow in the repository that you wish to use the newly created self-hosted runner must be updated to target the `self-hosted` label.
 
-```
+```yaml
 runs-on: self-hosted
 ```
 
 To target a specific operating system or architecture, you can qualify your requirements by entering in the appropriate labels.
 
-```
+```yaml
 runs-on: [self-hosted, linux, ARM64]
 ```
 
@@ -151,7 +150,7 @@ Once the container has been built, you can run the runner using the `docker run`
 
 Ensure that the `ORGANIZATION` and `REG_TOKEN` environment variables are defined for the organisation you are setting up a self-hosted runner in.
 
-```
+```bash
 docker run \
     --detach \
     --env ORGANIZATION=organisation \
