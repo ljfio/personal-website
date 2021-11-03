@@ -42,6 +42,10 @@
           </div>
         </div>
       </div>
+
+      <div class="font-semibold text-4xl uppercase">
+        <nav-link href="mailto:hire@ljf.io">Hire Me</nav-link>
+      </div>
     </div>
   </div>
 </template>
