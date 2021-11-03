@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 text-gray-800 dark:text-gray-200">
+  <div class="mt-8">
     <div class="font-semibold text-4xl uppercase">
       <nav-link to="/">/</nav-link>
       <span>Resume</span>
@@ -77,8 +77,6 @@ export default {
 
 <style lang="postcss" scoped>
 ::v-deep .nuxt-content {
-  @apply text-gray-800 dark:text-gray-200;
-
   & p {
     @apply my-2;
   }

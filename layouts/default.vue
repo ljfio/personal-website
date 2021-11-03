@@ -1,15 +1,7 @@
 <template>
   <div class="container mx-auto py-16 px-4">
     <nuxt-link to="/">
-      <div
-        class="
-          text-gray-800
-          dark:text-gray-200
-          space-x-4
-          flex flex-row
-          items-center
-        "
-      >
+      <div class="space-x-4 flex flex-row items-center">
         <img
           src="//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798?s=400"
           alt=""
@@ -41,7 +33,7 @@ export default {
   },
   head: {
     bodyAttrs: {
-      class: "bg-gray-50 dark:bg-gray-900",
+      class: "text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900",
     },
   },
 };
