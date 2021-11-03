@@ -5,7 +5,9 @@
       <span>{{ error.statusCode }}</span>
     </div>
 
-    <div class="mt-32 text-gray-300 text-6xl font-light italic">
+    <div
+      class="my-32 text-gray-300 dark:text-gray-700 text-6xl font-light italic"
+    >
       {{ error.message }}
     </div>
   </div>
