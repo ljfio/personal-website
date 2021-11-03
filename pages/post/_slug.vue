@@ -9,7 +9,7 @@
       <div class="flex leading-none flex-col space-y-2">
         <h1 class="text-4xl">{{ page.title }}</h1>
         <h2 class="text-lg">{{ page.description }}</h2>
-        <p class="text-gray-400">
+        <p class="text-gray-400 dark:text-gray-600">
           {{ $moment(page.publishedAt).fromNow() }}
         </p>
       </div>

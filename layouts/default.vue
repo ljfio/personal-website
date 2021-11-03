@@ -41,7 +41,7 @@ export default {
   },
   head: {
     bodyAttrs: {
-      class: "dark:bg-gray-900",
+      class: "bg-gray-50 dark:bg-gray-900",
     },
   },
 };
