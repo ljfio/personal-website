@@ -73,7 +73,7 @@ export default {
   async asyncData({ $content, params }) {
     const limit = 5;
 
-    const number = params.number ?? 1;
+    const number = params.number ? Number.parseInt(params.number) : 1;
 
     const skip = number * limit - limit;
 
