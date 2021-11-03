@@ -23,12 +23,22 @@
         <h1 class="text-4xl font-semibold">Luke Fisher</h1>
       </div>
     </nuxt-link>
+
     <nuxt />
+
+    <div class="mt-16 text-gray-300 dark:text-gray-700 font-light">
+      &copy; {{ year }}
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      year: new Date().getFullYear(),
+    };
+  },
   head: {
     bodyAttrs: {
       class: "dark:bg-gray-900",
