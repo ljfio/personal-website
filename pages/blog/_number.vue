@@ -1,16 +1,7 @@
 <template>
   <div class="mt-8 text-gray-800 dark:text-gray-200">
     <div class="font-semibold text-4xl uppercase">
-      <nuxt-link
-        class="
-          text-gray-400
-          dark:text-gray-600
-          hover:text-gray-900
-          dark:hover:text-gray-100
-        "
-        to="/"
-        >/</nuxt-link
-      >
+      <nav-link to="/">/</nav-link>
       <span>Blog</span>
       <span v-if="number > 1">/ {{ number }}</span>
     </div>
@@ -52,33 +43,21 @@
       "
     >
       <div>
-        <nuxt-link
+        <nav-link
           :to="{ name: 'blog-number', params: { number: number - 1 } }"
-          class="
-            text-gray-400
-            dark:text-gray-600
-            hover:text-gray-800
-            dark:hover:text-gray-200
-          "
           v-if="number > 1"
         >
           Previous
-        </nuxt-link>
+        </nav-link>
       </div>
 
       <div>
-        <nuxt-link
+        <nav-link
           :to="{ name: 'blog-number', params: { number: number + 1 } }"
-          class="
-            text-gray-400
-            dark:text-gray-600
-            hover:text-gray-800
-            dark:hover:text-gray-200
-          "
           v-if="more"
         >
           Next
-        </nuxt-link>
+        </nav-link>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="mt-8">
     <div class="font-semibold text-4xl uppercase">
-      <nuxt-link class="text-gray-400 hover:text-gray-900" to="/">/</nuxt-link>
+      <nav-link to="/">/</nav-link>
       <span>{{ error.statusCode }}</span>
     </div>
 

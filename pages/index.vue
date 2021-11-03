@@ -1,77 +1,30 @@
 <template>
   <div class="mt-8">
     <nav>
-      <ul
-        class="
-          text-4xl
-          uppercase
-          font-semibold
-          leading-none
-          space-y-4
-          text-gray-400
-          dark:text-gray-600
-        "
-      >
+      <ul class="text-4xl uppercase font-semibold leading-none space-y-4">
         <li>
-          <nuxt-link
-            to="/about"
-            class="hover:text-gray-900 dark:hover:text-gray-100"
-            >About</nuxt-link
-          >
+          <nav-link to="/about">About</nav-link>
         </li>
         <li>
-          <nuxt-link
-            to="/resume"
-            class="hover:text-gray-900 dark:hover:text-gray-100"
-            >Resume</nuxt-link
-          >
+          <nav-link to="/resume">Resume</nav-link>
         </li>
         <li>
-          <nuxt-link
-            to="/blog"
-            class="hover:text-gray-900 dark:hover:text-gray-100"
-            >Blog</nuxt-link
-          >
+          <nav-link to="/blog">Blog</nav-link>
         </li>
         <li>
-          <a
-            target="_blank"
-            class="hover:text-gray-900 dark:hover:text-gray-100"
-            href="https://github.com/ljfio"
-            >Code</a
-          >
+          <nav-link href="https://github.com/ljfio">Code</nav-link>
         </li>
         <li>
-          <a
-            target="_blank"
-            class="hover:text-gray-900 dark:hover:text-gray-100"
-            href="https://linkedin.com/in/ljfio"
-            >Connect</a
-          >
+          <nav-link href="https://linkedin.com/in/ljfio">Connect</nav-link>
         </li>
         <li>
-          <a
-            target="_blank"
-            class="hover:text-gray-900 dark:hover:text-gray-100"
-            href="https://twitter.com/ljf_io"
-            >Tweet</a
-          >
+          <nav-link href="https://twitter.com/ljf_io">Tweet</nav-link>
         </li>
         <li>
-          <a
-            target="_blank"
-            class="hover:text-gray-900 dark:hover:text-gray-100"
-            href="https://instagram.com/ljfio/"
-            >Snap</a
-          >
+          <nav-link href="https://instagram.com/ljfio/">Snap</nav-link>
         </li>
         <li>
-          <a
-            target="_blank"
-            class="hover:text-gray-900 dark:hover:text-gray-100"
-            href="mailto:hello@ljf.io"
-            >Mail</a
-          >
+          <nav-link href="mailto:hello@ljf.io">Mail</nav-link>
         </li>
       </ul>
     </nav>
