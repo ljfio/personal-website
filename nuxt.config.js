@@ -19,11 +19,6 @@ export default {
     ]
   },
 
-  //
-  env: {
-    COMMIT_SHA: process.env.COMMIT_SHA || process.env.GITHUB_SHA
-  },
-
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
