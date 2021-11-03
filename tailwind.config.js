@@ -22,7 +22,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gray: colors.trueGray,
+        gray: {
+          950: '#050505',
+          ...colors.trueGray
+        },
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"]

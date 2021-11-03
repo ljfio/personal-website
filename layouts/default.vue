@@ -33,7 +33,7 @@ export default {
   },
   head: {
     bodyAttrs: {
-      class: "text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900",
+      class: "text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-950",
     },
   },
 };
