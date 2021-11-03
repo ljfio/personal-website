@@ -92,7 +92,12 @@ export default {
   },
 
   sitemap: {
-    hostname: "https://lukefisher.me"
+    hostname: "https://lukefisher.me",
+    defaults: {
+      changefreq: 'monthly',
+      priority: 1,
+      lastmod: new Date()
+    }
   },
 
   // Webfontloader (https://github.com/Developmint/nuxt-webfontloader)
