@@ -31,9 +31,7 @@ export default {
     return {
       year: new Date().getFullYear(),
       commit_ref: process.env.GITHUB_SHA?.substring(0, 7) || "dev",
-      commit_url: process.env.GITHUB_SERVER_URL
-        ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/commit/${process.env.GITHUB_SHA}`
-        : "#",
+      commit_url: `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/commit/${process.env.GITHUB_SHA}`,
     };
   },
   head: {

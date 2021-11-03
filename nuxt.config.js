@@ -19,6 +19,13 @@ export default {
     ]
   },
 
+  //
+  env: {
+    GITHUB_SHA: process.env.GITHUB_SHA,
+    GITHUB_REPOSITORY: process.env.GITHUB_REPOSITORY,
+    GITHUB_SERVER_URL: process.env.GITHUB_SERVER_URL,
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
