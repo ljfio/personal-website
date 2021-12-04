@@ -21,7 +21,7 @@ export default {
 
   //
   env: {
-    GITHUB_SHA: process.env.GITHUB_SHA,
+    COMMIT_SHA: process.env.GITHUB_SHA || process.env.CF_PAGES_COMMIT_SHA,
     GITHUB_REPOSITORY: process.env.GITHUB_REPOSITORY,
     GITHUB_SERVER_URL: process.env.GITHUB_SERVER_URL,
   },
