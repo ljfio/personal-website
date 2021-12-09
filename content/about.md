@@ -19,7 +19,7 @@ Strong advocate for digital privacy and data security. Member of both the [EFF][
 two organisations standing up to protect your digital rights.
 
 [rgu]: https://rgu.ac.uk
-[rgucs]: https://rgucs.com
+[rgucs]: https://www.rguunion.co.uk/getinvolved/societies/computing/
 [rguhack]: https://rguhack.uk
 [eff]: https://eff.org
 [org]: https://openrightsgroup.org
