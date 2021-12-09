@@ -54,8 +54,10 @@ export default {
     '@nuxt/content',
     // https://github.com/Developmint/nuxt-webfontloader
     'nuxt-webfontloader',
-    //https://github.com/nuxt-community/sitemap-module#readme
-    '@nuxtjs/sitemap'
+    // https://github.com/nuxt-community/sitemap-module#readme
+    '@nuxtjs/sitemap',
+    // https://github.com/nuxt-community/robots-module#readme
+    '@nuxtjs/robots',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -101,12 +103,18 @@ export default {
   },
 
   sitemap: {
-    hostname: "https://lukefisher.me",
+    hostname: "https://ljf.io",
     defaults: {
       changefreq: 'monthly',
       priority: 1,
       lastmod: new Date()
     }
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
+    Sitemap: 'https://ljf.io/sitemap.xml'
   },
 
   // Webfontloader (https://github.com/Developmint/nuxt-webfontloader)
