@@ -14,17 +14,16 @@
 
       <div class="">
         <h2 class="text-4xl semibold">Experience</h2>
-        <div
-          class="my-4 text-xl leading-none"
-          v-for="role in experience"
-          :key="role.slug"
-        >
-          {{ role.title }} at {{ role.company }}
-          <div class="pt-2 text-sm text-gray-600 dark:text-gray-400">
+        <div class="my-4" v-for="role in experience" :key="role.slug">
+          <div class="text-xl">{{ role.title }} at {{ role.company }}</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">
             {{ $moment(role.start).format("MMMM YYYY") }} -
             {{
               role.finish ? $moment(role.finish).format("MMMM YYYY") : "Present"
             }}
+          </div>
+          <div>
+            <nuxt-content :document="role"></nuxt-content>
           </div>
         </div>
       </div>
@@ -32,12 +31,12 @@
       <div class="">
         <h2 class="text-4xl semibold">Achievements</h2>
         <div
-          class="my-4 text-xl leading-none"
+          class="my-4"
           v-for="achievement in achievements"
           :key="achievement.slug"
         >
-          {{ achievement.title }}
-          <div class="pt-2 text-sm text-gray-600 dark:text-gray-400">
+          <div class="text-xl">{{ achievement.title }}</div>
+          <div>
             {{ achievement.description }}
           </div>
         </div>
