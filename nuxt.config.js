@@ -7,6 +7,12 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    htmlAttrs: {
+      lang: 'en',
+    },
+    bodyAttrs: {
+      class: "text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-950",
+    },
     titleTemplate: (chunk) => {
       return chunk ? `${chunk} - Luke Fisher` : 'Luke Fisher';
     },
@@ -75,6 +81,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extractCSS: true,
   },
 
   generate: {

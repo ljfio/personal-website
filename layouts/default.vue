@@ -34,10 +34,5 @@ export default {
       commit_url: `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/commit/${process.env.COMMIT_SHA}`,
     };
   },
-  head: {
-    bodyAttrs: {
-      class: "text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-950",
-    },
-  },
 };
 </script>
