@@ -12,15 +12,15 @@ Most modern browsers (released within the last 2 years) support the [`prefers-co
 
 ```css
 body {
-  background-color: #E5E5E5;
-	color: #050505;
+    background-color: #E5E5E5;
+    color: #050505;
 }
 
 @media (prefers-color-scheme: dark) {
-	body {
-  	background-color: #050505;
-    color: #E5E5E5;
-  }
+    body {
+        background-color: #050505;
+        color: #E5E5E5;
+    }
 }
 ```
 
@@ -30,11 +30,11 @@ Within [Tailwind][tailwind], the UI framework I used to style my website, varian
 
 ```js
 export default {
-  head: {
-    bodyAttrs: {
-      class: "bg-gray-100 dark:bg-gray-900",
+    head: {
+        bodyAttrs: {
+            class: "bg-gray-100 dark:bg-gray-900",
+        },
     },
-  },
 }
 ```
 
