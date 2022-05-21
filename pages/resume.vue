@@ -14,8 +14,8 @@
 
       <div class="">
         <h2 class="text-4xl semibold">Experience</h2>
-        <div class="my-4" v-for="role in experience" :key="role.slug">
-          <div class="text-xl">{{ role.title }} at {{ role.company }}</div>
+        <div class="my-6" v-for="role in experience" :key="role.slug">
+          <div class="text-2xl">{{ role.title }} at {{ role.company }}</div>
           <div class="text-sm text-gray-600 dark:text-gray-400">
             {{ $moment(role.start).format("MMMM YYYY") }} -
             {{
@@ -31,11 +31,11 @@
       <div class="">
         <h2 class="text-4xl semibold">Achievements</h2>
         <div
-          class="my-4"
+          class="my-6"
           v-for="achievement in achievements"
           :key="achievement.slug"
         >
-          <div class="text-xl">{{ achievement.title }}</div>
+          <div class="text-2xl">{{ achievement.title }}</div>
           <div>
             {{ achievement.description }}
           </div>
