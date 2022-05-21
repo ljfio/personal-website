@@ -6,6 +6,6 @@ Accomplished Software Engineer specialising in Microsoft Technologies such as Az
 
 Architected and developed bespoke solutions within enterprises and in software house environments.
 
-Delivered software for multiple form-factors (desktop, tablet and mobile) using a range of frameworks (UWP / WPF / Xamarin).
+Delivered software for multiple form-factors (desktop, tablet and mobile) using a range of frameworks (WPF / UWP / Xamarin).
 
-Experienced in full-stack web development including the use of modern JavaScript frameworks such as Vue.
+Experienced in full-stack web development including the use of modern JavaScript frameworks such as React and Vue.
