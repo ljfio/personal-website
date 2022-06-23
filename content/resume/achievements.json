@@ -1,13 +1,18 @@
 [
     {
+        "slug": "degree",
+        "title": "First Class BSc (Hons) in Computer Science",
+        "description": "Completed first, second and degree years with Distinction"
+    },
+    {
         "slug": "microsoft",
         "title": "Microsoft Certification",
         "description": "Azure Developer Associate and Power Platform Developer Associate"
     },
     {
-        "slug": "degree",
-        "title": "First Class BSc (Hons) in Computer Science",
-        "description": "Completed first, second and degree years with Distinction"
+        "slug": "aws",
+        "title": "AWS Certification",
+        "description": "AWS Developer Associate"
     },
     {
         "slug": "conocophillips",
