@@ -7,7 +7,7 @@ Forward thinking software architect and engineer specialising in Microsoft, open
 
 Currently working as a software consultant developing new and supporting bespoke software solutions for local government and private sector.
 
-Certified as an [Azure Developer Associate][ms_ada], [AWS Developer Associate][aws_da] and [Power Platform Developer Associate][ms_ppda].
+Certified as an [AWS Developer Associate][aws_da], [Azure Developer Associate][ms_ada] and [Power Platform Developer Associate][ms_ppda].
 
 Graduated from [Robert Gordon University (RGU)][rgu] in Aberdeen with a First Class BSc (Hons) in Computer Science.
 
