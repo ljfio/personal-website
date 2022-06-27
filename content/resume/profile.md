@@ -2,11 +2,11 @@
 title: Profile
 ---
 
-Accomplished Software Engineer specialising in Microsoft Technologies such as Azure, C# .NET and SQL Server.
+Accomplished Software Engineer specialising in open-source, cloud and Microsoft technology.
 
 Architected and developed bespoke solutions within enterprises and in software house environments.
 
-Certified multi-cloud developer in both [AWS][aws_da] and [Azure][ms_ada].
+Certified in cloud development as an [AWS Developer Associate][aws_da] and [Azure Developer Associate][ms_ada].
 
 Delivered software for multiple form-factors (desktop, tablet and mobile) using a range of frameworks (WPF / UWP / Xamarin).
 
