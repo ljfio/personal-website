@@ -8,11 +8,11 @@ Forward thinking software architect and engineer specialising in Microsoft, open
 Currently working as a software consultant developing new and supporting bespoke software solutions for local government and private sector.
 
 Certified as an [Azure Developer Associate][ms_ada], [AWS Developer Associate][aws_da] and [Power Platform Developer Associate][ms_ppda].
-Working towards attaining certification across AWS, Azure and Kubernetes.
 
 Graduated from [Robert Gordon University (RGU)][rgu] in Aberdeen with a First Class BSc (Hons) in Computer Science.
 
 Elected President of the [RGU Computing Society][rgucs] for the 2016-17 and 2017-18 terms.
+
 Lead organiser for [RGUHack][rguhack], the annual hackathon run by the society.
 
 Strong advocate for digital privacy and data security. Member of both the [EFF][eff] and [ORG][org],
