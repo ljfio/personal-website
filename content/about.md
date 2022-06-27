@@ -7,8 +7,8 @@ Forward thinking software architect and engineer specialising in Microsoft, open
 
 Currently working as a software consultant developing new and supporting bespoke software solutions for local government and private sector.
 
-Certified as a Microsoft [Azure Developer Associate][ms_ada] and [Power Platform Developer Associate][ms_ppda].
-Working towards attaining certification in AWS, Azure and Kubernetes.
+Certified as an [Azure Developer Associate][ms_ada], [AWS Developer Associate][aws_da] and [Power Platform Developer Associate][ms_ppda].
+Working towards attaining certification across AWS, Azure and Kubernetes.
 
 Graduated from [Robert Gordon University (RGU)][rgu] in Aberdeen with a First Class BSc (Hons) in Computer Science.
 
@@ -25,3 +25,4 @@ two organisations standing up to protect your digital rights.
 [org]: https://openrightsgroup.org
 [ms_ada]: https://www.credly.com/badges/30a3590f-d7fd-47b1-921a-2b39e709e678/public_url
 [ms_ppda]: https://www.credly.com/badges/d949c568-c2df-4ad6-b667-d6b3645b8cbb/public_url
+[aws_da]: https://www.credly.com/badges/4a675941-3c8a-4ce8-a913-ec9b6a283581/public_url
