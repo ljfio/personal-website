@@ -127,7 +127,7 @@ export default {
   // Webfontloader (https://github.com/Developmint/nuxt-webfontloader)
   webfontloader: {
     google: {
-      families: ['Inter:300,400,600,700']
+      families: ['Inter:200,300,400,500,600,700']
     }
   },
 

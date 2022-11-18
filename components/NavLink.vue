@@ -1,16 +1,18 @@
 <template>
-  <span
-    class="
+  <span class="
       text-gray-400
       dark:text-gray-600
       hover:text-gray-900
       dark:hover:text-gray-100
-    "
-  >
-    <nuxt-link v-if="to" :to="to">
+      underline
+    ">
+    <nuxt-link v-if="to"
+               :to="to">
       <slot></slot>
     </nuxt-link>
-    <a v-else-if="href" :href="href" target="_blank">
+    <a v-else-if="href"
+       :href="href"
+       target="_blank">
       <slot></slot>
     </a>
   </span>

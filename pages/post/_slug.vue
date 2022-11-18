@@ -1,7 +1,7 @@
 <template>
   <div class="mt-8">
-    <div class="font-semibold text-4xl uppercase">
-      <nav-link to="/">/</nav-link>
+    <div class="font-normal text-4xl ">
+      <nav-link to="/">&lt;</nav-link>
       <nav-link to="/blog">Blog</nav-link>
     </div>
 
@@ -18,31 +18,24 @@
     <div class="">
       <nuxt-content :document="page" />
 
-      <div
-        class="
+      <div class="
           flex flex-row
           w-full
           mt-8
-          font-semibold
+          font-normal
           text-4xl
-          uppercase
           justify-between
-        "
-      >
+        ">
         <div>
-          <nav-link
-            :to="{ name: 'post-slug', params: { slug: next.slug } }"
-            v-if="next"
-          >
+          <nav-link :to="{ name: 'post-slug', params: { slug: next.slug } }"
+                    v-if="next">
             Next
           </nav-link>
         </div>
 
         <div>
-          <nav-link
-            :to="{ name: 'post-slug', params: { slug: prev.slug } }"
-            v-if="prev"
-          >
+          <nav-link :to="{ name: 'post-slug', params: { slug: prev.slug } }"
+                    v-if="prev">
             Previous
           </nav-link>
         </div>

@@ -1,13 +1,11 @@
 <template>
   <div class="mt-8">
-    <div class="font-semibold text-4xl uppercase">
+    <div class="font-normal text-4xl">
       <nav-link to="/">/</nav-link>
       <span>{{ error.statusCode }}</span>
     </div>
 
-    <div
-      class="my-32 text-gray-300 dark:text-gray-700 text-6xl font-light italic"
-    >
+    <div class="my-32 text-gray-300 dark:text-gray-700 text-6xl font-light italic">
       {{ error.message }}
     </div>
   </div>

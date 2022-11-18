@@ -1,21 +1,17 @@
 <template>
   <div class="mt-8">
-    <div class="font-semibold text-4xl uppercase">
-      <nav-link to="/">/</nav-link>
+    <div class="font-normal text-4xl">
+      <nav-link to="/">&lt;</nav-link>
       <span>Blog</span>
-      <span v-if="number > 1">/ {{ number }}</span>
+      <span v-if="number > 1"> &bull; {{ number }}</span>
     </div>
 
-    <div
-      class="my-8 leading-none flex flex-col space-y-2"
-      v-for="page in pages"
-      :key="page.slug"
-    >
+    <div class="my-8 leading-none flex flex-col space-y-2"
+         v-for="page in pages"
+         :key="page.slug">
       <h2 class="text-4xl">
-        <nuxt-link
-          class="underline hover:text-gray-400"
-          :to="{ name: 'post-slug', params: { slug: page.slug } }"
-        >
+        <nuxt-link class="underline hover:text-gray-400"
+                   :to="{ name: 'post-slug', params: { slug: page.slug } }">
           {{ page.title }}
         </nuxt-link>
       </h2>
@@ -27,35 +23,29 @@
       </p>
     </div>
 
-    <div class="text-center" v-if="pages.length == 0">
+    <div class="text-center"
+         v-if="pages.length == 0">
       No articles to display
     </div>
 
-    <div
-      class="
+    <div class="
         flex flex-row
         w-full
         mt-8
-        font-semibold
+        font-normal
         text-4xl
-        uppercase
         justify-between
-      "
-    >
+      ">
       <div>
-        <nav-link
-          :to="{ name: 'blog-number', params: { number: number - 1 } }"
-          v-if="number > 1"
-        >
+        <nav-link :to="{ name: 'blog-number', params: { number: number - 1 } }"
+                  v-if="number > 1">
           Previous
         </nav-link>
       </div>
 
       <div>
-        <nav-link
-          :to="{ name: 'blog-number', params: { number: number + 1 } }"
-          v-if="more"
-        >
+        <nav-link :to="{ name: 'blog-number', params: { number: number + 1 } }"
+                  v-if="more">
           Next
         </nav-link>
       </div>
@@ -65,6 +55,7 @@
 
 <script>
 export default {
+  layout: 'main',
   head() {
     return {
       title: (this.number > 1 ? `Page ${this.number} - ` : "") + "Blog",
@@ -108,4 +99,5 @@ export default {
 </script>
 
 <style>
+
 </style>
