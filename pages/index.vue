@@ -45,6 +45,9 @@
           <nav-link href="https://twitter.com/ljf_io">Tweet</nav-link>
         </li>
         <li>
+          <nav-link rel="me" href="https://dotnet.social/@ljfio">Toot</nav-link>
+        </li>
+        <li>
           <nav-link href="https://instagram.com/ljfio/">Snap</nav-link>
         </li>
         <li>
