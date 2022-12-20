@@ -12,6 +12,7 @@
     </nuxt-link>
     <a v-else-if="href"
        :href="href"
+       :rel="rel"
        target="_blank">
       <slot></slot>
     </a>
@@ -20,6 +21,6 @@
 
 <script>
 export default {
-  props: ["to", "href"],
+  props: ["to", "href", "rel"],
 };
 </script>
