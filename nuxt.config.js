@@ -126,8 +126,14 @@ export default {
 
   // Webfontloader (https://github.com/Developmint/nuxt-webfontloader)
   webfontloader: {
-    google: {
-      families: ['Inter:200,300,400,500,600,700']
+    // google: {
+    //   families: ['Inter:200,300,400,500,600,700']
+    // },
+    custom: {
+      families: ['Muli:200,300,400,600,700'],
+      urls: [
+        'https://use.typekit.net/thw4hkd.css'
+      ]
     }
   },
 
