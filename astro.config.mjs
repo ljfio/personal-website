@@ -7,7 +7,10 @@ import sitemap from "@astrojs/sitemap";
 import vue from "@astrojs/vue";
 
 // https://astro.build/config
+import tailwind from "@astrojs/tailwind";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://ljf.io',
-  integrations: [sitemap(), vue()]
+  integrations: [sitemap(), vue(), tailwind()]
 });
