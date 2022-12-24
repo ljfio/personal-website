@@ -1,8 +1,13 @@
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
+
+// https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
+import vue from "@astrojs/vue";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://ljf.io',
-    integrations: [sitemap()]
+  site: 'https://ljf.io',
+  integrations: [sitemap(), vue()]
 });
