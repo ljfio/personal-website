@@ -1,4 +1,7 @@
-import moment from "moment";
+import moment from "moment-timezone";
+
+moment.locale('en-gb');
+moment.tz.setDefault('Europe/London');
 
 moment.relativeTimeRounding(Math.floor);
 

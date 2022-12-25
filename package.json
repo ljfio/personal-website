@@ -15,6 +15,7 @@
     "@astrojs/vue": "^1.2.2",
     "astro": "^1.7.2",
     "moment": "^2.29.4",
+    "moment-timezone": "^0.5.40",
     "tailwindcss": "^3.0.24",
     "vue": "^3.2.30"
   }
