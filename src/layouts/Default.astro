@@ -10,7 +10,7 @@ interface Props {
   description?: string,
 };
 
-const titleTemplate = (chunk: string) => (chunk ? `${chunk} - ` : '') + 'Luke Fisher';
+const titleTemplate = (chunk?: string) => (chunk ? `${chunk} - ` : '') + 'Luke Fisher';
 ---
 
 <!DOCTYPE html>
