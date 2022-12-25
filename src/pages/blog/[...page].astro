@@ -1,21 +1,20 @@
 ---
+import NameBanner from "@components/NameBanner.vue";
 import NavLink from "@components/NavLink.vue";
 import DefaultLayout from "@layouts/Default.astro";
+import type { Page } from "astro";
+import { CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }) {
   const limit = 5;
 
-  const posts = await Astro.glob("../post/*.md");
+  const posts = await getCollection("articles");
 
-  const data = posts.map((p) => {
-    return {
-      title: p.frontmatter.title,
-      description: p.frontmatter.description,
-      url: p.url,
-    };
-  });
+  return paginate(posts, { pageSize: limit });
+}
 
-  return paginate(data, { pageSize: limit });
+interface Props {
+  page: Page<CollectionEntry<"articles">>;
 }
 
 const { page } = Astro.props;
@@ -23,44 +22,54 @@ const number = page.currentPage;
 ---
 
 <DefaultLayout>
-  <div class="mt-8">
-    <div class="font-normal text-4xl">
-      <NavLink to="/">&lt;</NavLink>
-      <span>Blog</span>
-      {number > 1 ? <span> &bull; {number}</span> : null}
-    </div>
+  <div class="my-8">
+    <NameBanner />
 
-    {
-      page.data.map(({ title, url, description }) => {
-        <div class="my-8 leading-none flex flex-col space-y-2">
-          <h2 class="text-4xl">
-            <NavLink to={url} class="underline hover:text-gray-400">
-              {title}
-            </NavLink>
-          </h2>
-
-          <p class="text-lg italic">{description}</p>
-
-          <p class="text-gray-400 dark:text-gray-600" />
-        </div>
-      })
-    }
-
-    {
-      page.data.length == 0 ? (
-        <div class="text-center" v-if="pages.length == 0">
-          No articles to display
-        </div>
-      ) : null
-    }
-
-    <div class="flex flex-row w-full mt-8 font-normal text-4xl justify-between">
-      <div>
-        {page.url.prev ? <NavLink to={page.url.prev}>Previous</NavLink> : null}
+    <div class="mt-8">
+      <div class="font-normal text-4xl">
+        <NavLink to="/">&lt;</NavLink>
+        <span>Blog</span>
+        {number > 1 ? <span> &bull; {number}</span> : null}
       </div>
 
-      <div>
-        {page.url.next ? <NavLink to={page.url.next}>Next</NavLink> : null}
+      {
+        page.data.map(({ data, slug }) =>
+          <div class="my-8 leading-none flex flex-col space-y-2">
+            <h2 class="text-4xl">
+              <NavLink to={`/post/${slug}`} class="underline hover:text-gray-400">
+                {data.title}
+              </NavLink>
+            </h2>
+
+            <p class="text-lg italic">{data.description}</p>
+
+            <p class="text-gray-400 dark:text-gray-600" />
+          </div>
+        )
+      }
+
+      {
+        page.data.length == 0 ? (
+          <div class="text-center" v-if="pages.length == 0">
+            No articles to display
+          </div>
+        ) : null
+      }
+
+      <div
+        class="flex flex-row w-full mt-8 font-normal text-4xl justify-between"
+      >
+        <div>
+          {
+            page.url.prev ? (
+              <NavLink to={page.url.prev}>Previous</NavLink>
+            ) : null
+          }
+        </div>
+
+        <div>
+          {page.url.next ? <NavLink to={page.url.next}>Next</NavLink> : null}
+        </div>
       </div>
     </div>
   </div>
