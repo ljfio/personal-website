@@ -1,60 +1,65 @@
 ---
 import NavLink from "../components/NavLink.vue";
+import DefaultLayout from "../layouts/Default.astro";
 ---
 
-<div class="mt-16 lg:my-40">
-  <div
-    class="flex flex-col md:flex-row-reverse gap-x-16 gap-y-12 md:items-center"
-  >
-    <div class="flex-grow">
-      <img
-        src="//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798?s=400"
-        alt=""
-        class="rounded-full w-32 border-4 border-gray-800 dark:border-gray-200"
-      />
-    </div>
-
-    <div class="flex flex-col flex-shrink justify-center gap-y-2 font-light">
-      <h2 class="text-3xl lg:text-4xl text-gray-400 dark:text-gray-600">
-        Hello, I am&hellip;
-      </h2>
-
-      <h1 class="text-7xl lg:text-8xl font-semibold">Luke Fisher</h1>
-
-      <h3 class="text-3xl lg:text-4xl text-gray-400 dark:text-gray-600 italic">
-        Software Engineer
-      </h3>
-    </div>
-  </div>
-
-  <nav class="mt-24 md:mt-40">
-    <ul
-      class="text-4xl flex flex-col lg:flex-row flex-wrap leading-none gap-x-10 gap-y-4"
+<DefaultLayout>
+  <div class="mt-16 lg:my-40">
+    <div
+      class="flex flex-col md:flex-row-reverse gap-x-16 gap-y-12 md:items-center"
     >
-      <li>
-        <NavLink to="/resume">Resume</NavLink>
-      </li>
-      <li>
-        <NavLink to="/blog">Blog</NavLink>
-      </li>
-      <li>
-        <NavLink href="https://github.com/ljfio">Code</NavLink>
-      </li>
-      <li>
-        <NavLink href="https://linkedin.com/in/ljfio">Connect</NavLink>
-      </li>
-      <li>
-        <NavLink href="https://twitter.com/ljf_io">Tweet</NavLink>
-      </li>
-      <li>
-        <NavLink href="https://dotnet.social/@ljfio" rel="me">Toot</NavLink>
-      </li>
-      <li>
-        <NavLink href="https://instagram.com/ljfio/">Snap</NavLink>
-      </li>
-      <li>
-        <NavLink href="mailto:hello@ljf.io">Mail</NavLink>
-      </li>
-    </ul>
-  </nav>
-</div>
+      <div class="flex-grow">
+        <img
+          src="//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798?s=400"
+          alt=""
+          class="rounded-full w-32 border-4 border-gray-800 dark:border-gray-200"
+        />
+      </div>
+
+      <div class="flex flex-col flex-shrink justify-center gap-y-2 font-light">
+        <h2 class="text-3xl lg:text-4xl text-gray-400 dark:text-gray-600">
+          Hello, I am&hellip;
+        </h2>
+
+        <h1 class="text-7xl lg:text-8xl font-semibold">Luke Fisher</h1>
+
+        <h3
+          class="text-3xl lg:text-4xl text-gray-400 dark:text-gray-600 italic"
+        >
+          Software Engineer
+        </h3>
+      </div>
+    </div>
+
+    <nav class="mt-24 md:mt-40">
+      <ul
+        class="text-4xl flex flex-col lg:flex-row flex-wrap leading-none gap-x-10 gap-y-4"
+      >
+        <li>
+          <NavLink to="/resume">Resume</NavLink>
+        </li>
+        <li>
+          <NavLink to="/blog">Blog</NavLink>
+        </li>
+        <li>
+          <NavLink href="https://github.com/ljfio">Code</NavLink>
+        </li>
+        <li>
+          <NavLink href="https://linkedin.com/in/ljfio">Connect</NavLink>
+        </li>
+        <li>
+          <NavLink href="https://twitter.com/ljf_io">Tweet</NavLink>
+        </li>
+        <li>
+          <NavLink href="https://dotnet.social/@ljfio" rel="me">Toot</NavLink>
+        </li>
+        <li>
+          <NavLink href="https://instagram.com/ljfio/">Snap</NavLink>
+        </li>
+        <li>
+          <NavLink href="mailto:hello@ljf.io">Mail</NavLink>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</DefaultLayout>
