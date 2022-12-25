@@ -1,0 +1,87 @@
+---
+import NameBanner from "@components/NameBanner.vue";
+import NavLink from "@components/NavLink.vue";
+import DefaultLayout from "@layouts/Default.astro";
+
+import { getCollection } from "astro:content";
+
+import moment from "plugins/moment";
+
+import * as profile from "@pages/_resume/profile.md";
+import achievements from "@pages/_resume/achievements.json";
+
+const ProfileContent = profile.Content;
+
+const experiences = await getCollection("experience");
+
+const sortedExperiences = experiences.sort(
+  (a, b) => b.data.start.getTime() - a.data.start.getTime()
+);
+---
+
+<DefaultLayout title="Resume">
+  <div class="my-8">
+    <NameBanner />
+
+    <div class="mt-8">
+      <div class="font-normal text-4xl">
+        <NavLink to="/">&lt;</NavLink>
+        <span>Resume</span>
+      </div>
+
+      <div class="mt-8 space-y-8 content">
+        <div>
+          <h1>Profile</h1>
+
+          <ProfileContent />
+        </div>
+
+        <div>
+          <h1>Experience</h1>
+
+          {
+            sortedExperiences.map(async (post) => {
+              const { Content } = await post.render();
+              const role = post.data;
+
+              return (
+                <div class="my-6">
+                  <div class="text-2xl">
+                    {role.title} at {role.company}
+                  </div>
+
+                  <div class="text-sm text-gray-600 dark:text-gray-400">
+                    {moment(role.start).format("MMMM YYYY")} -
+                    {role.finish
+                      ? moment(role.finish).format("MMMM YYYY")
+                      : "Present"}
+                  </div>
+
+                  <div class="render-content">
+                    <Content />
+                  </div>
+                </div>
+              );
+            })
+          }
+        </div>
+
+        <div>
+          <h1>Achievements</h1>
+          {
+            achievements.map((achievement) => (
+              <div class="my-6">
+                <div class="text-2xl">{achievement.title}</div>
+                <div>{achievement.description}</div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="font-normal text-4xl">
+          <NavLink href="mailto:hire@ljf.io">Hire Me</NavLink>
+        </div>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

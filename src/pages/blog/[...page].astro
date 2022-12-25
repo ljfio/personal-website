@@ -1,0 +1,85 @@
+---
+import NameBanner from "@components/NameBanner.vue";
+import NavLink from "@components/NavLink.vue";
+import DefaultLayout from "@layouts/Default.astro";
+
+import type { Page } from "astro";
+import { CollectionEntry, getCollection } from "astro:content";
+
+import moment from "plugins/moment";
+
+export async function getStaticPaths({ paginate }) {
+  const limit = 5;
+
+  const posts = await getCollection("articles");
+
+  const sorted = posts.sort((a, b)=> b.data.published.getTime() - a.data.published.getTime());
+
+  return paginate(sorted, { pageSize: limit });
+}
+
+interface Props {
+  page: Page<CollectionEntry<"articles">>;
+}
+
+const { page } = Astro.props;
+const number = page.currentPage;
+
+const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : '') + 'Blog';
+---
+
+<DefaultLayout title={titleTemplate(number)}>
+  <div class="my-8">
+    <NameBanner />
+
+    <div class="mt-8">
+      <div class="font-normal text-4xl">
+        <NavLink to="/">&lt;</NavLink>
+        <span>Blog</span>
+        {number > 1 ? <span> &bull; {number}</span> : null}
+      </div>
+
+      {
+        page.data.map(({ data, slug }) =>
+          <div class="my-8 leading-none flex flex-col space-y-2">
+            <h2 class="text-4xl">
+              <NavLink to={`/post/${slug}`} class="underline hover:text-gray-400">
+                {data.title}
+              </NavLink>
+            </h2>
+
+            <p class="text-lg italic">{data.description}</p>
+
+            <p class="text-gray-400 dark:text-gray-600">
+              {moment(data.published).fromNow()}
+              </p>
+          </div>
+        )
+      }
+
+      {
+        page.data.length == 0 ? (
+          <div class="text-center" v-if="pages.length == 0">
+            No articles to display
+          </div>
+        ) : null
+      }
+
+      <div
+        class="flex flex-row w-full mt-8 font-normal text-4xl justify-between"
+      >
+        <div>
+          {
+            page.url.prev ? (
+              <NavLink to={page.url.prev}>Previous</NavLink>
+            ) : null
+          }
+        </div>
+
+        <div>
+          {page.url.next ? <NavLink to={page.url.next}>Next</NavLink> : null}
+        </div>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

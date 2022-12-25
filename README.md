@@ -1,6 +1,6 @@
 # My Personal Website
 
-This is the repository hosting the code for my own personal website coded using [Nuxt](https://nuxtjs.org).
+This is the repository hosting the code for my own personal website coded using [Astro](https://astro.build).
 
 ## Build Setup
 

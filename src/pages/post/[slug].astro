@@ -1,0 +1,105 @@
+---
+import NameBanner from "@components/NameBanner.vue";
+import NavLink from "@components/NavLink.vue";
+import DefaultLayout from "@layouts/Default.astro";
+
+import { CollectionEntry, getCollection } from "astro:content";
+
+import moment from "plugins/moment";
+
+const { post } = Astro.props;
+
+export async function getStaticPaths({}) {
+  const posts = await getCollection("articles");
+
+  const data = posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+      props: { post },
+    };
+  });
+
+  return data;
+}
+
+interface Props {
+  post: CollectionEntry<"articles">;
+}
+
+const { title, description, published } = post.data;
+
+const { Content } = await post.render();
+
+const postsAfter = await getCollection("articles", ({ data }) => {
+  return data.published.getTime() < post.data.published.getTime();
+});
+
+const after =
+  postsAfter.length > 0
+    ? postsAfter.sort(
+        (a, b) => b.data.published.getTime() - a.data.published.getTime()
+      )[0]
+    : null;
+
+const postsBefore = await getCollection("articles", ({ data }) => {
+  return data.published.getTime() > post.data.published.getTime();
+});
+
+const before =
+  postsBefore.length > 0
+    ? postsBefore.sort(
+        (a, b) => a.data.published.getTime() - b.data.published.getTime()
+      )[0]
+    : null;
+---
+
+<DefaultLayout title={title} description={description}>
+  <div class="my-8">
+    <NameBanner />
+
+    <div class="mt-8">
+      <div class="font-normal text-4xl">
+        <NavLink to="/">&lt;</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
+      </div>
+
+      <div class="my-8">
+        <div class="flex leading-none flex-col space-y-2">
+          <h1 class="text-4xl">{title}</h1>
+          <h2 class="text-lg italic">{description}</h2>
+          <p class="text-gray-400 dark:text-gray-600">
+            {moment(published).fromNow()}
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="content">
+          <Content />
+        </div>
+
+        <div
+          class="flex flex-row w-full mt-8 font-normal text-4xl justify-between"
+        >
+          <div>
+            {
+              before ? (
+                <NavLink to={`/post/${before.slug}`}>Next</NavLink>
+              ) : null
+            }
+          </div>
+
+          <div>
+            {
+              after ? (
+                <NavLink to={`/post/${after.slug}`}>Previous</NavLink>
+              ) : null
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

@@ -1,0 +1,16 @@
+---
+import NavLink from "@components/NavLink.vue";
+import DefaultLayout from "@layouts/Default.astro";
+---
+<DefaultLayout title="404 - Not Found" description="Not Found">
+  <div class="mt-8">
+    <div class="font-normal text-4xl">
+      <NavLink to="/">/</NavLink>
+      <span>404</span>
+    </div>
+
+    <div class="my-32 text-gray-300 dark:text-gray-700 text-6xl font-light italic">
+      This page could not be found
+    </div>
+  </div>
+</DefaultLayout>
