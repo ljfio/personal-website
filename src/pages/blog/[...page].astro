@@ -2,8 +2,11 @@
 import NameBanner from "@components/NameBanner.vue";
 import NavLink from "@components/NavLink.vue";
 import DefaultLayout from "@layouts/Default.astro";
+
 import type { Page } from "astro";
 import { CollectionEntry, getCollection } from "astro:content";
+
+import moment from "plugins/moment";
 
 export async function getStaticPaths({ paginate }) {
   const limit = 5;
@@ -46,7 +49,7 @@ const number = page.currentPage;
             <p class="text-lg italic">{data.description}</p>
 
             <p class="text-gray-400 dark:text-gray-600">
-              {data.published}
+              {moment(data.published).fromNow()}
               </p>
           </div>
         )
