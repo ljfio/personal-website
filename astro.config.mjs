@@ -10,10 +10,13 @@ import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
+import compress from "astro-compress";
+
+// https://astro.build/config
 export default defineConfig({
   experimental: {
-    contentCollections: true,
+    contentCollections: true
   },
   site: 'https://ljf.io',
-  integrations: [sitemap(), vue(), tailwind()]
+  integrations: [sitemap(), vue(), tailwind(), compress()]
 });
