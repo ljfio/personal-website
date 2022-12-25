@@ -36,23 +36,17 @@ const postsAfter = await getCollection("articles", ({ data }) => {
   return data.published.getTime() < post.data.published.getTime();
 });
 
-const after =
-  postsAfter.length > 0
-    ? postsAfter.sort(
-        (a, b) => b.data.published.getTime() - a.data.published.getTime()
-      )[0]
-    : null;
+const [after] = postsAfter.sort(
+  (a, b) => b.data.published.getTime() - a.data.published.getTime()
+);
 
 const postsBefore = await getCollection("articles", ({ data }) => {
   return data.published.getTime() > post.data.published.getTime();
 });
 
-const before =
-  postsBefore.length > 0
-    ? postsBefore.sort(
-        (a, b) => a.data.published.getTime() - b.data.published.getTime()
-      )[0]
-    : null;
+const [before] = postsBefore.sort(
+  (a, b) => a.data.published.getTime() - b.data.published.getTime()
+);
 ---
 
 <DefaultLayout title={title} description={description}>
