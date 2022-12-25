@@ -5,12 +5,18 @@ import DefaultLayout from "@layouts/Default.astro";
 
 import { getCollection } from "astro:content";
 
+import moment from "plugins/moment";
+
 import * as profile from "@pages/_resume/profile.md";
 import achievements from "@pages/_resume/achievements.json";
 
 const ProfileContent = profile.Content;
 
 const experiences = await getCollection("experience");
+
+const sortedExperiences = experiences.sort(
+  (a, b) => b.data.start.getTime() - a.data.start.getTime()
+);
 ---
 
 <DefaultLayout>
@@ -27,24 +33,30 @@ const experiences = await getCollection("experience");
         <div class="">
           <div class="text-4xl font-normal">Profile</div>
 
-          <ProfileContent />
+          <ProfileContent class="content" />
         </div>
 
         <div class="">
           <h2 class="text-4xl font-normal">Experience</h2>
 
           {
-            experiences.map(async (post) => {
+            sortedExperiences.map(async (post) => {
               const { Content } = await post.render();
+              const role = post.data;
 
               return (
                 <div class="my-6">
                   <div class="text-2xl">
-                    {post.data.title} at {post.data.company}
+                    {role.title} at {role.company}
                   </div>
-                  <div class="text-sm text-gray-600 dark:text-gray-400" />
+                  <div class="text-sm text-gray-600 dark:text-gray-400">
+                    {moment(role.start).format("MMMM YYYY")} -
+                    {role.finish
+                      ? moment(role.finish).format("MMMM YYYY")
+                      : "Present"}
+                  </div>
                   <div>
-                    <Content />
+                    <Content class="render-content" />
                   </div>
                 </div>
               );
@@ -71,3 +83,19 @@ const experiences = await getCollection("experience");
     </div>
   </div>
 </DefaultLayout>
+
+<style lang="postcss">
+  .render-content {
+    & p {
+      @apply my-2;
+    }
+
+    & a {
+      @apply underline;
+
+      &:hover {
+        @apply text-gray-400;
+      }
+    }
+  }
+</style>

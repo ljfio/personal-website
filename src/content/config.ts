@@ -12,8 +12,8 @@ const experience = defineCollection({
   schema: {
     title: z.string(),
     company: z.string(),
-    start: z.string(),
-    finish: z.string().nullable()
+    start: z.string().transform(d => new Date(d)),
+    finish: z.string().transform(d => new Date(d)).nullable()
   }
 });
 
