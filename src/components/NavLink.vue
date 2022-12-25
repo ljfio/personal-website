@@ -1,26 +1,32 @@
 <template>
-  <span class="
+  <a :href="location"
+     :rel="rel"
+     :target="target"
+     class="
       text-gray-400
       dark:text-gray-600
       hover:text-gray-900
       dark:hover:text-gray-100
       underline
     ">
-    <nuxt-link v-if="to"
-               :to="to">
-      <slot></slot>
-    </nuxt-link>
-    <a v-else-if="href"
-       :href="href"
-       :rel="rel"
-       target="_blank">
-      <slot></slot>
-    </a>
-  </span>
+    <slot></slot>
+  </a>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  props: ["to", "href", "rel"],
+  props: {
+    to: String,
+    href: String,
+    rel: String,
+  },
+  computed: {
+    location() {
+      return this.$props.to ?? this.$props.href;
+    },
+    target() {
+      return this.$props.to !== undefined ? "_self" : "_blank";
+    }
+  }
 };
 </script>
