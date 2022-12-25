@@ -24,9 +24,11 @@ interface Props {
 
 const { page } = Astro.props;
 const number = page.currentPage;
+
+const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : '') + 'Blog';
 ---
 
-<DefaultLayout>
+<DefaultLayout title={titleTemplate(number)}>
   <div class="my-8">
     <NameBanner />
 

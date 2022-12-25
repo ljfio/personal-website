@@ -33,7 +33,7 @@ const { title, description, published } = post.data;
 const { Content } = await post.render();
 ---
 
-<DefaultLayout>
+<DefaultLayout title={title} description={description}>
   <div class="my-8">
     <NameBanner />
 
