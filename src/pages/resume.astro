@@ -29,15 +29,15 @@ const sortedExperiences = experiences.sort(
         <span>Resume</span>
       </div>
 
-      <div class="mt-8 space-y-8">
-        <div class="">
-          <div class="text-4xl font-normal">Profile</div>
+      <div class="mt-8 space-y-8 content">
+        <div>
+          <h1>Profile</h1>
 
-          <ProfileContent class="content" />
+          <ProfileContent />
         </div>
 
-        <div class="">
-          <h2 class="text-4xl font-normal">Experience</h2>
+        <div>
+          <h1>Experience</h1>
 
           {
             sortedExperiences.map(async (post) => {
@@ -49,14 +49,16 @@ const sortedExperiences = experiences.sort(
                   <div class="text-2xl">
                     {role.title} at {role.company}
                   </div>
+
                   <div class="text-sm text-gray-600 dark:text-gray-400">
                     {moment(role.start).format("MMMM YYYY")} -
                     {role.finish
                       ? moment(role.finish).format("MMMM YYYY")
                       : "Present"}
                   </div>
-                  <div>
-                    <Content class="render-content" />
+
+                  <div class="render-content">
+                    <Content />
                   </div>
                 </div>
               );
@@ -64,8 +66,8 @@ const sortedExperiences = experiences.sort(
           }
         </div>
 
-        <div class="">
-          <h2 class="text-4xl font-normal">Achievements</h2>
+        <div>
+          <h1>Achievements</h1>
           {
             achievements.map((achievement) => (
               <div class="my-6">
@@ -83,19 +85,3 @@ const sortedExperiences = experiences.sort(
     </div>
   </div>
 </DefaultLayout>
-
-<style lang="postcss">
-  .render-content {
-    & p {
-      @apply my-2;
-    }
-
-    & a {
-      @apply underline;
-
-      &:hover {
-        @apply text-gray-400;
-      }
-    }
-  }
-</style>

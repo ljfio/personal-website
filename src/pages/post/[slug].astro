@@ -5,6 +5,8 @@ import DefaultLayout from "@layouts/Default.astro";
 
 import { CollectionEntry, getCollection } from "astro:content";
 
+import moment from "plugins/moment";
+
 const { post } = Astro.props;
 
 export async function getStaticPaths({}) {
@@ -46,13 +48,15 @@ const { Content } = await post.render();
           <h1 class="text-4xl">{title}</h1>
           <h2 class="text-lg italic">{description}</h2>
           <p class="text-gray-400 dark:text-gray-600">
-            <!-- {{ $moment(post.published).fromNow() }} -->
+            {moment(published).fromNow()}
           </p>
         </div>
       </div>
 
-      <div class="">
-        <Content />
+      <div>
+        <div class="content">
+          <Content />
+        </div>
 
         <div
           class="flex flex-row w-full mt-8 font-normal text-4xl justify-between"
