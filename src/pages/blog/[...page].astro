@@ -10,7 +10,9 @@ export async function getStaticPaths({ paginate }) {
 
   const posts = await getCollection("articles");
 
-  return paginate(posts, { pageSize: limit });
+  const sorted = posts.sort((a, b)=> b.data.published.getTime() - a.data.published.getTime());
+
+  return paginate(sorted, { pageSize: limit });
 }
 
 interface Props {
@@ -43,7 +45,9 @@ const number = page.currentPage;
 
             <p class="text-lg italic">{data.description}</p>
 
-            <p class="text-gray-400 dark:text-gray-600" />
+            <p class="text-gray-400 dark:text-gray-600">
+              {data.published}
+              </p>
           </div>
         )
       }
