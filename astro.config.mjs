@@ -11,6 +11,9 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  experimental: {
+    contentCollections: true,
+  },
   site: 'https://ljf.io',
   integrations: [sitemap(), vue(), tailwind()]
 });
