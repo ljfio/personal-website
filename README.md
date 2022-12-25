@@ -9,13 +9,12 @@ This is the repository hosting the code for my own personal website coded using 
 $ yarn install
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ yarn dev
 
-# build for production and launch server
-$ yarn run build
-$ yarn run start
+# build for production
+$ yarn build
 
-# generate static project
-$ yarn run generate
+# run preview of production site
+$ yarn preview
 ```
 
