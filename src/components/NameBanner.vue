@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/">
+  <a href="/">
     <div class="space-x-4 flex flex-row items-center">
       <img src="//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798?s=400"
            alt=""
@@ -11,5 +11,5 @@
           " />
       <h1 class="text-4xl font-semibold">Luke Fisher</h1>
     </div>
-  </nuxt-link>
+  </a>
 </template>
