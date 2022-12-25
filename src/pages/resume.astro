@@ -1,0 +1,73 @@
+---
+import NameBanner from "@components/NameBanner.vue";
+import NavLink from "@components/NavLink.vue";
+import DefaultLayout from "@layouts/Default.astro";
+
+import { getCollection } from "astro:content";
+
+import * as profile from "@pages/_resume/profile.md";
+import achievements from "@pages/_resume/achievements.json";
+
+const ProfileContent = profile.Content;
+
+const experiences = await getCollection("experience");
+---
+
+<DefaultLayout>
+  <div class="my-8">
+    <NameBanner />
+
+    <div class="mt-8">
+      <div class="font-normal text-4xl">
+        <NavLink to="/">&lt;</NavLink>
+        <span>Resume</span>
+      </div>
+
+      <div class="mt-8 space-y-8">
+        <div class="">
+          <div class="text-4xl font-normal">Profile</div>
+
+          <ProfileContent />
+        </div>
+
+        <div class="">
+          <h2 class="text-4xl font-normal">Experience</h2>
+
+          {
+            experiences.map(async (post) => {
+              const { Content } = await post.render();
+
+              return (
+                <div class="my-6">
+                  <div class="text-2xl">
+                    {post.data.title} at {post.data.company}
+                  </div>
+                  <div class="text-sm text-gray-600 dark:text-gray-400" />
+                  <div>
+                    <Content />
+                  </div>
+                </div>
+              );
+            })
+          }
+        </div>
+
+        <div class="">
+          <h2 class="text-4xl font-normal">Achievements</h2>
+          {
+            achievements.map((achievement) => (
+              <div class="my-6">
+                <div class="text-2xl">{achievement.title}</div>
+                <div>{achievement.description}</div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="font-normal text-4xl">
+          <NavLink href="mailto:hire@ljf.io">Hire Me</NavLink>
+        </div>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

@@ -8,6 +8,9 @@
       ],
       "@layouts/*": [
         "src/layouts/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
       ]
     },
     "jsx": "preserve"
