@@ -14,6 +14,9 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    format: 'file'
+  },
   experimental: {
     contentCollections: true
   },
