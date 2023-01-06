@@ -13,6 +13,9 @@ import tailwind from "@astrojs/tailwind";
 import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
+import image from "@astrojs/image";
+
+// https://astro.build/config
 export default defineConfig({
   build: {
     format: 'file'
@@ -21,5 +24,7 @@ export default defineConfig({
     contentCollections: true
   },
   site: 'https://ljf.io',
-  integrations: [sitemap(), vue(), tailwind(), prefetch()]
+  integrations: [sitemap(), vue(), tailwind(), prefetch(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  })]
 });
