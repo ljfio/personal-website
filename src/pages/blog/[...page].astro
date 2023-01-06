@@ -43,7 +43,7 @@ const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : '') + 'Blog';
         page.data.map(({ data, slug }) =>
           <div class="my-8 leading-none flex flex-col space-y-2">
             <h2 class="text-4xl">
-              <NavLink to={`/post/${slug}`} class="underline hover:text-gray-400">
+              <NavLink to={`/post/${slug}`}>
                 {data.title}
               </NavLink>
             </h2>
