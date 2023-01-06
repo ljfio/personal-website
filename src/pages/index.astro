@@ -2,6 +2,10 @@
 import NavLink from "../components/NavLink.vue";
 import DefaultLayout from "../layouts/Default.astro";
 
+import { Image } from "@astrojs/image/components";
+const imageUrl =
+  "//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798.jpg?s=384";
+
 import socials from "@pages/_socials.json";
 ---
 
@@ -13,9 +17,11 @@ import socials from "@pages/_socials.json";
       class="flex flex-col md:flex-row-reverse gap-x-16 gap-y-12 md:items-center"
     >
       <div class="flex-grow">
-        <img
-          src="//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798?s=400"
-          alt=""
+        <Image
+          src={imageUrl}
+          alt="Luke Fisher"
+          width={384}
+          aspectRatio={1}
           class="rounded-full w-32 border-4 border-gray-800 dark:border-gray-200"
         />
       </div>
@@ -48,7 +54,9 @@ import socials from "@pages/_socials.json";
         {
           socials.map(({ link, title }) => (
             <li>
-              <NavLink href={link} rel="me">{title}</NavLink>
+              <NavLink href={link} rel="me">
+                {title}
+              </NavLink>
             </li>
           ))
         }
