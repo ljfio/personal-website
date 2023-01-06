@@ -71,13 +71,13 @@ const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : '') + 'Blog';
         <div>
           {
             page.url.prev ? (
-              <NavLink to={page.url.prev}>Previous</NavLink>
+              <NavLink to={page.url.prev} rel="prev">Previous</NavLink>
             ) : null
           }
         </div>
 
         <div>
-          {page.url.next ? <NavLink to={page.url.next}>Next</NavLink> : null}
+          {page.url.next ? <NavLink to={page.url.next} rel="next">Next</NavLink> : null}
         </div>
       </div>
     </div>
