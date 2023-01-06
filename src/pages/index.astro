@@ -40,10 +40,10 @@ import socials from "@pages/_socials.json";
         class="text-4xl flex flex-col lg:flex-row flex-wrap leading-none gap-x-10 gap-y-4"
       >
         <li>
-          <NavLink to="/resume">Resume</NavLink>
+          <NavLink to="/resume" rel="prefetch">Resume</NavLink>
         </li>
         <li>
-          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/blog" rel="prefetch">Blog</NavLink>
         </li>
         {
           socials.map(({ link, title }) => (

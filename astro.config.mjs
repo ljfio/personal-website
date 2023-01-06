@@ -13,6 +13,9 @@ import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 
 // https://astro.build/config
+import prefetch from "@astrojs/prefetch";
+
+// https://astro.build/config
 export default defineConfig({
   build: {
     format: 'file'
@@ -21,5 +24,5 @@ export default defineConfig({
     contentCollections: true
   },
   site: 'https://ljf.io',
-  integrations: [sitemap(), vue(), tailwind(), compress()]
+  integrations: [sitemap(), vue(), tailwind(), compress(), prefetch()]
 });
