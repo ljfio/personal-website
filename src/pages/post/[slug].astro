@@ -28,7 +28,7 @@ interface Props {
   post: CollectionEntry<"articles">;
 }
 
-const { title, description, published } = post.data;
+const { title, description, published, tags } = post.data;
 
 const { Content } = await post.render();
 
@@ -66,6 +66,18 @@ const [before] = postsBefore.sort(
           <p class="text-gray-500">
             {moment(published).fromNow()}
           </p>
+          <div class="flex flex-row gap-x-2 font-light">
+            {
+              tags?.map((tag) => (
+                <a
+                  href={`/tag/${tag}`}
+                  class="px-2 py-2 bg-gray-200 dark:bg-gray-800 hover:dark:bg-gray-600 rounded"
+                >
+                  {tag}
+                </a>
+              ))
+            }
+          </div>
         </div>
       </div>
 
