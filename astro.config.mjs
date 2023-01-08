@@ -27,6 +27,11 @@ export default defineConfig({
     contentCollections: true
   },
   site: 'https://ljf.io',
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark-dimmed'
+    }
+  },
   integrations: [
     sitemap(),
     vue(),
