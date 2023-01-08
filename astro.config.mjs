@@ -27,7 +27,21 @@ export default defineConfig({
     contentCollections: true
   },
   site: 'https://ljf.io',
-  integrations: [sitemap(), vue(), tailwind(), prefetch(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  }), compress()]
+  integrations: [
+    sitemap(),
+    vue(),
+    tailwind(),
+    prefetch(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp'
+    }),
+    compress({
+      html: {
+        collapseWhitespace: true,
+        preserveLineBreaks: true,
+        keepClosingSlash: true,
+        removeComments: true
+      }
+    })
+  ]
 });
