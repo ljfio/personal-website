@@ -1,6 +1,8 @@
 ---
+import Meta from "@components/Meta.astro";
 import NameBanner from "@components/NameBanner.astro";
 import NavLink from "@components/NavLink.vue";
+import type { OpenGraph } from "@components/opengraph";
 import DefaultLayout from "@layouts/Default.astro";
 
 import { CollectionEntry, getCollection } from "astro:content";
@@ -30,6 +32,17 @@ interface Props {
 
 const { title, description, published, tags } = post.data;
 
+const openGraph: OpenGraph = {
+  title: title,
+  description: description,
+  type: 'article',
+  image: {
+    url: '',
+    alt: ''
+  },
+  url: ''
+}
+
 const { Content } = await post.render();
 
 const postsAfter = await getCollection("articles", ({ data }) => {
@@ -50,6 +63,8 @@ const [before] = postsBefore.sort(
 ---
 
 <DefaultLayout title={title} description={description}>
+  <Meta slot="head" openGraph={openGraph} />
+
   <div class="my-8">
     <NameBanner />
 
