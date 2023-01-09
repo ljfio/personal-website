@@ -3,10 +3,11 @@
      :rel="rel"
      :target="target"
      class="
-      text-gray-500
-      hover:text-gray-900
-      dark:hover:text-gray-100
-      underline
+     text-gray-600
+     dark:text-gray-400
+     underline
+     hover:no-underline
+     leading-none
     ">
     <slot></slot>
   </a>
