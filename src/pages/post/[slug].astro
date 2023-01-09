@@ -1,6 +1,7 @@
 ---
 import NameBanner from "@components/NameBanner.astro";
 import NavLink from "@components/NavLink.vue";
+import Tags from "@components/Tags.vue";
 import DefaultLayout from "@layouts/Default.astro";
 
 import { CollectionEntry, getCollection } from "astro:content";
@@ -65,18 +66,7 @@ const [before] = postsBefore.sort(
 
           <h2 class="text-lg italic">{description}</h2>
 
-          <div class="flex flex-row gap-x-2 font-light text-sm">
-            {
-              tags?.map((tag) => (
-                <a
-                  href={`/tag/${tag}`}
-                  class="px-2 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 hover:dark:bg-gray-700 rounded"
-                >
-                  {tag}
-                </a>
-              ))
-            }
-          </div>
+          <Tags tags={tags} />
 
           <p class="text-gray-500">
             {moment(published).fromNow()}
