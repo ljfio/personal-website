@@ -1,0 +1,39 @@
+---
+import type { OpenGraph } from "./opengraph";
+
+interface Props {
+  openGraph?: OpenGraph;
+}
+
+const { openGraph } = Astro.props;
+---
+
+{openGraph?.title && <meta property="og:title" content={openGraph.title} />}
+{openGraph?.type && <meta property="og:type" content={openGraph.type} />}
+{openGraph?.url && <meta property="og:url" content={openGraph.url} />}
+{
+  openGraph?.image && (
+    <>
+      <meta property="og:image" content={openGraph.image.url} />
+      <meta property="og:image:alt" content={openGraph.image.alt} />
+      {openGraph?.image?.secure_url && (
+        <meta
+          property="og:image:secure_url"
+          content={openGraph.image.secure_url}
+        />
+      )}
+      {openGraph?.image?.width && (
+        <meta
+          property="og:image:width"
+          content={openGraph.image.width.toString()}
+        />
+      )}
+      {openGraph?.image?.height && (
+        <meta
+          property="og:image:height"
+          content={openGraph.image.height.toString()}
+        />
+      )}
+    </>
+  )
+}
