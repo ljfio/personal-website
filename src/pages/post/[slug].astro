@@ -62,22 +62,25 @@ const [before] = postsBefore.sort(
       <div class="my-8">
         <div class="flex leading-none flex-col space-y-2">
           <h1 class="text-4xl">{title}</h1>
+
           <h2 class="text-lg italic">{description}</h2>
-          <p class="text-gray-500">
-            {moment(published).fromNow()}
-          </p>
-          <div class="flex flex-row gap-x-2 font-light">
+
+          <div class="flex flex-row gap-x-2 font-light text-sm">
             {
               tags?.map((tag) => (
                 <a
                   href={`/tag/${tag}`}
-                  class="px-2 py-2 bg-gray-200 dark:bg-gray-800 hover:dark:bg-gray-600 rounded"
+                  class="px-2 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 hover:dark:bg-gray-700 rounded"
                 >
                   {tag}
                 </a>
               ))
             }
           </div>
+
+          <p class="text-gray-500">
+            {moment(published).fromNow()}
+          </p>
         </div>
       </div>
 
