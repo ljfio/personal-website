@@ -84,17 +84,21 @@ const [before] = postsBefore.sort(
         >
           <div>
             {
-              before ? (
-                <NavLink to={`/post/${before.slug}`} rel="next">Next</NavLink>
-              ) : null
+              before && (
+                <NavLink to={`/post/${before.slug}`} rel="next">
+                  Next
+                </NavLink>
+              )
             }
           </div>
 
           <div>
             {
-              after ? (
-                <NavLink to={`/post/${after.slug}`} rel="prev">Previous</NavLink>
-              ) : null
+              after && (
+                <NavLink to={`/post/${after.slug}`} rel="prev">
+                  Previous
+                </NavLink>
+              )
             }
           </div>
         </div>

@@ -14,7 +14,9 @@ export async function getStaticPaths({ paginate }) {
 
   const posts = await getCollection("articles");
 
-  const sorted = posts.sort((a, b)=> b.data.published.getTime() - a.data.published.getTime());
+  const sorted = posts.sort(
+    (a, b) => b.data.published.getTime() - a.data.published.getTime()
+  );
 
   return paginate(sorted, { pageSize: limit });
 }
@@ -26,7 +28,7 @@ interface Props {
 const { page } = Astro.props;
 const number = page.currentPage;
 
-const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : '') + 'Blog';
+const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : "") + "Blog";
 ---
 
 <DefaultLayout title={titleTemplate(number)}>
@@ -37,35 +39,31 @@ const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : '') + 'Blog';
       <div class="font-normal text-4xl">
         <NavLink to="/">&lt;</NavLink>
         <span>Blog</span>
-        {number > 1 ? <span> &bull; {number}</span> : null}
+        {number > 1 && <span> &bull; {number}</span>}
       </div>
 
       {
-        page.data.map(({ data, slug }) =>
+        page.data.map(({ data, slug }) => (
           <div class="my-8 leading-none flex flex-col space-y-2">
             <h2 class="text-4xl">
-              <NavLink to={`/post/${slug}`}>
-                {data.title}
-              </NavLink>
+              <NavLink to={`/post/${slug}`}>{data.title}</NavLink>
             </h2>
 
             <p class="text-lg italic">{data.description}</p>
 
             <Tags tags={data.tags} />
 
-            <p class="text-gray-500">
-              {moment(data.published).fromNow()}
-              </p>
+            <p class="text-gray-500">{moment(data.published).fromNow()}</p>
           </div>
-        )
+        ))
       }
 
       {
-        page.data.length == 0 ? (
+        page.data.length == 0 && (
           <div class="text-center" v-if="pages.length == 0">
             No articles to display
           </div>
-        ) : null
+        )
       }
 
       <div
@@ -73,14 +71,22 @@ const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : '') + 'Blog';
       >
         <div>
           {
-            page.url.prev ? (
-              <NavLink to={page.url.prev} rel="prev">Previous</NavLink>
-            ) : null
+            page.url.prev && (
+              <NavLink to={page.url.prev} rel="prev">
+                Previous
+              </NavLink>
+            )
           }
         </div>
 
         <div>
-          {page.url.next ? <NavLink to={page.url.next} rel="next">Next</NavLink> : null}
+          {
+            page.url.next && (
+              <NavLink to={page.url.next} rel="next">
+                Next
+              </NavLink>
+            )
+          }
         </div>
       </div>
     </div>
