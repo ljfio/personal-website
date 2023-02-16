@@ -23,9 +23,6 @@ export default defineConfig({
   build: {
     format: 'file'
   },
-  experimental: {
-    contentCollections: true
-  },
   site: 'https://ljf.io',
   markdown: {
     shikiConfig: {
