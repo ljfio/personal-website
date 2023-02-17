@@ -2,6 +2,7 @@
 import NameBanner from "@components/NameBanner.astro";
 import NavLink from "@components/NavLink.vue";
 import Tags from "@components/Tags.vue";
+import TimeSince from "@components/TimeSince.vue";
 import DefaultLayout from "@layouts/Default.astro";
 
 import type { Page } from "astro";
@@ -53,7 +54,9 @@ const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : "") + "Blog";
 
             <Tags tags={data.tags} />
 
-            <p class="text-gray-500">{moment(data.published).fromNow()}</p>
+            <p class="text-gray-500">
+              <TimeSince date={data.published} client:load />
+            </p>
           </div>
         ))
       }
