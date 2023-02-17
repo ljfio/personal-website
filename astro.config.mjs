@@ -30,7 +30,10 @@ export default defineConfig({
     }
   },
   integrations: [
-    sitemap(),
+    sitemap({
+      changefreq: 'monthly',
+      lastmod: new Date(),
+    }),
     vue(),
     tailwind(),
     prefetch(),
