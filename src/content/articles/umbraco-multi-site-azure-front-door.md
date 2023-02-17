@@ -32,13 +32,13 @@ This was tested locally using Postman to send a request against our running serv
 
 ## Unexpected Problem
 
-When the solution was deployed into Azure, when visiting each distinct host the site was still loading the default route. It appeared that the expected solution did not work. This was further diagnosed with the incoming request headers being dumped to the client for debugging. 
+When the solution was deployed into Azure, when visiting each distinct host the site was still loading the default route. It appeared that the expected solution did not work. This was further diagnosed with the incoming request headers being dumped to the client for debugging.
 
 It was clear that the `Host` was not being replaced with the value in `X-Forwarded-Host` as it was when running locally. The question is what was different?
 
 ## Further Diagnosis
 
-The way that Azure hosts ASP .NET Core sites, specifically when using a Windows based App Service, the sites hosting model can be configured to run `InProcess` or `OutOfProcess`. 
+The way that Azure hosts ASP .NET Core sites, specifically when using a Windows based App Service, the sites hosting model can be configured to run `InProcess` or `OutOfProcess`.
 
 When running in `InProcess` IIS is repsonsible for routing requests and controlling the headers returned in the HTTP request. With `OutOfProcess` the site is launched using the `dotnet`  command and exists as a sub-process with HTTP traffic being sent to the launched Kestrel web server.
 
@@ -53,7 +53,7 @@ Our approach needed an update to the `web.config` for IIS to rewrite the `Host` 
       <rules>
         <rule name="Replace Host with X-Forwarded-Host Header" enabled="true" stopProcessing="false">
           <match url="(.*)" />
-          <conditions>
+          <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
             <add input="{HTTP_X_FORWARDED_HOST}" pattern="^$" negate="true" />
           </conditions>
           <serverVariables>
@@ -77,7 +77,7 @@ This file needs to be placed into the the `/site/` folder (one level up from the
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
 	<system.applicationHost>
   	<rewrite>
-    	<allowedServerVariables>
+    	<allowedServerVariables xdt:Transform="Replace">
       	<add name="HTTP_HOST" xdt:Transform="InsertIfMissing" />
         <add name="HTTP_X_FORWARDED_HOST" xdt:Transform="InsertIfMissing" />
       </allowedServerVariables>
