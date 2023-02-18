@@ -2,6 +2,7 @@
 title: 2021 A Year in Review
 description: A retrospective of the second year of the pandemic
 published: 2022-01-03 10:53:21
+tags: ['annual-review']
 ---
 
 ## New Beginnings

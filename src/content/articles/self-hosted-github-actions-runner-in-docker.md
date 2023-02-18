@@ -2,6 +2,7 @@
 title: Self-Hosted GitHub Actions Runner in Docker
 description: How to run your CI/CD pipeline from GitHub using Docker
 published: 2021-01-11 21:27:00
+tags: ['github', 'docker']
 ---
 
 Continuous Integration / Continuous Deployment (CI/CD) is an approach to building and testing software continuously while deploying any successful builds of the software to a live production environment when appropriate. This is a solution applied in modern software development to increase developer velocity.

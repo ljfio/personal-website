@@ -2,6 +2,7 @@
 title: Nuxt + Tailwind Dark Mode
 description: Turn off the lights the easy way
 published: 2021-11-03 20:47:00
+tags: ['vue', 'nuxt', 'tailwind']
 ---
 
 While giving my personal website a much overdue visual refresh late into the night, my eyes strained at the clean bright white design I'd chosen. As a developer who typically uses a dark theme in my IDE, should I also switch my website to be the same? Or could it be possible to use a different theme based on the user's preferred choice?

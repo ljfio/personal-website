@@ -2,6 +2,7 @@
 title: Google HashCode 2017 Practice Problem
 description: Using Genetic Algorithms to attempt to solve Pizza cutting for good
 published: 2017-02-15 22:40:00
+tags: ['java', 'hashcode', 'ai']
 ---
 
 I made an attempt at solving the HashCode 2017 practice problem.

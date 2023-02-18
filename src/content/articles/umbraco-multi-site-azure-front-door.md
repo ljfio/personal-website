@@ -2,6 +2,7 @@
 title: Umbraco Multi-Site with Azure Front Door
 description: How to access multiple homes via one Front Door
 published: 2023-02-16 21:50:49
+tags: ['umbraco', 'azure', 'cloud']
 ---
 
 ## Problem
