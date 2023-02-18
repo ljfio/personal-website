@@ -1,8 +1,7 @@
 ---
+import ArticleLink from "@components/ArticleLink.astro";
 import NameBanner from "@components/NameBanner.astro";
 import NavLink from "@components/NavLink.vue";
-import Tags from "@components/Tags.vue";
-import TimeSince from "@components/TimeSince.vue";
 import DefaultLayout from "@layouts/Default.astro";
 
 import type { Page } from "astro";
@@ -43,19 +42,13 @@ const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : "") + "Blog";
 
       {
         page.data.map(({ data, slug }) => (
-          <div class="my-8 leading-none flex flex-col space-y-2">
-            <h2 class="text-4xl">
-              <NavLink to={`/post/${slug}`}>{data.title}</NavLink>
-            </h2>
-
-            <p class="text-lg italic">{data.description}</p>
-
-            <Tags tags={data.tags} />
-
-            <p class="text-gray-500">
-              <TimeSince date={data.published} client:load />
-            </p>
-          </div>
+          <ArticleLink
+            slug={slug}
+            title={data.title}
+            description={data.description}
+            tags={data.tags}
+            published={data.published}
+          />
         ))
       }
 

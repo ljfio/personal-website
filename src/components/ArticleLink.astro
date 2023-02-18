@@ -1,0 +1,29 @@
+---
+import NavLink from "@components/NavLink.vue";
+import Tags from "@components/Tags.vue";
+import TimeSince from "@components/TimeSince.vue";
+
+interface Props {
+    slug:string;
+    title:string;
+    description?:string;
+    tags?: string[];
+    published: Date;
+}
+
+const {slug, title, description, tags, published} = Astro.props;
+---
+
+<div class="my-8 leading-none flex flex-col space-y-2">
+    <h2 class="text-4xl">
+      <NavLink to={`/post/${slug}`}>{title}</NavLink>
+    </h2>
+
+    <p class="text-lg italic">{description}</p>
+
+    <Tags tags={tags} />
+
+    <p class="text-gray-500">
+      <TimeSince date={published} client:load />
+    </p>
+  </div>
