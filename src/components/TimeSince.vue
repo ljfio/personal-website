@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import moment from 'moment';
+import moment from "plugins/moment";
 
 interface TimeSinceProps {
     date: Date;

@@ -8,8 +8,6 @@ import DefaultLayout from "@layouts/Default.astro";
 import type { Page } from "astro";
 import { CollectionEntry, getCollection } from "astro:content";
 
-import moment from "plugins/moment";
-
 export async function getStaticPaths({ paginate }) {
   const limit = 5;
 
