@@ -7,7 +7,6 @@
      dark:text-gray-400
      underline
      hover:no-underline
-     leading-none
     ">
     <slot></slot>
   </a>
