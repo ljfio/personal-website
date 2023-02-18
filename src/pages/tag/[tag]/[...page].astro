@@ -50,9 +50,11 @@ const { page } = Astro.props;
 const number = page.currentPage;
 
 const { tag } = Astro.params;
+
+const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : "") + `Tag - ${tag}`;
 ---
 
-<DefaultLayout>
+<DefaultLayout title={titleTemplate(number)}>
   <div class="my-8">
     <NameBanner />
 
