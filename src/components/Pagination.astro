@@ -1,0 +1,32 @@
+---
+import NavLink from '@components/NavLink.vue';
+
+interface Props {
+  next?: string;
+  previous?: string;
+}
+
+const {next, previous} = Astro.props;
+---
+
+<div class="flex flex-row w-full mt-8 font-normal text-4xl justify-between">
+  <div>
+    {
+      previous && (
+        <NavLink to={previous} rel="prev">
+          Previous
+        </NavLink>
+      )
+    }
+  </div>
+
+  <div>
+    {
+      next && (
+        <NavLink to={next} rel="next">
+          Next
+        </NavLink>
+      )
+    }
+  </div>
+</div>
