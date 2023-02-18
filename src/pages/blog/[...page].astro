@@ -53,14 +53,6 @@ const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : "") + "Blog";
         ))
       }
 
-      {
-        page.data.length == 0 && (
-          <div class="text-center" v-if="pages.length == 0">
-            No articles to display
-          </div>
-        )
-      }
-
       <Pagination next={page.url.next} previous={page.url.prev} />
     </div>
   </div>
