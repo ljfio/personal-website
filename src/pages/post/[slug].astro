@@ -76,11 +76,15 @@ const [before] = postsBefore.sort(
       </div>
 
       <div>
-        <div class="lg:flex flex-row-reverse">
-          <TableOfContents headings={headings} />
+        <div class="lg:grid grid-flow-col-dense grid-cols-4 gap-4">
+          <div class="order-last">
+            <TableOfContents headings={headings} />
+          </div>
 
-          <div class="lg:mr-6 flex-grow content">
-            <Content />
+          <div class="col-span-3">
+            <div class="prose dark:prose-invert max-w-none">
+              <Content />
+            </div>
           </div>
         </div>
 
