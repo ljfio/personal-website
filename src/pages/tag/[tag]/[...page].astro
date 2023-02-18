@@ -1,0 +1,81 @@
+---
+import ArticleLink from "@components/ArticleLink.astro";
+import NameBanner from "@components/NameBanner.astro";
+import NavLink from "@components/NavLink.vue";
+import Pagination from "@components/Pagination.astro";
+import DefaultLayout from "@layouts/Default.astro";
+
+import type { Page } from "astro";
+import { CollectionEntry, getCollection } from "astro:content";
+
+export async function getStaticPaths({ paginate }) {
+  const limit = 5;
+
+  const posts = await getCollection("articles");
+
+  const map = posts
+    .filter((post) => post.data.tags !== undefined)
+    .map((post) => {
+      return {
+        post: post,
+        tags: post.data.tags!,
+      };
+    })
+    .reduce((reduced, data) => {
+      data.tags.forEach((tag) => {
+        const articles = reduced.has(tag) ? reduced.get(tag)! : [];
+
+        articles.push(data.post);
+
+        reduced.set(tag, articles);
+      });
+
+      return reduced;
+    }, new Map<string, Array<CollectionEntry<"articles">>>());
+
+  return [...map].map(([tag, posts]) => {
+    return paginate(posts, {
+      params: { tag },
+      pageSize: limit,
+    });
+  });
+}
+
+interface Props {
+  tag: string;
+  page: Page<CollectionEntry<"articles">>;
+}
+
+const { page } = Astro.props;
+const number = page.currentPage;
+
+const { tag } = Astro.params;
+---
+
+<DefaultLayout>
+  <div class="my-8">
+    <NameBanner />
+
+    <div class="mt-8">
+      <div class="font-normal text-4xl">
+        <NavLink to="/">&lt;</NavLink>
+        <span>Tag &bull; {tag}</span>
+        {number > 1 && <span> &bull; {number}</span>}
+      </div>
+
+      {
+        page.data.map(({ data, slug }) => (
+          <ArticleLink
+            slug={slug}
+            title={data.title}
+            description={data.description}
+            tags={data.tags}
+            published={data.published}
+          />
+        ))
+      }
+
+      <Pagination next={page.url.next} previous={page.url.prev} />
+    </div>
+  </div>
+</DefaultLayout>
