@@ -1,6 +1,7 @@
 ---
 import NameBanner from "@components/NameBanner.astro";
 import NavLink from "@components/NavLink.vue";
+import Pagination from "@components/Pagination.astro";
 import Tags from "@components/Tags.vue";
 import TimeSince from "@components/TimeSince.vue";
 import DefaultLayout from "@layouts/Default.astro";
@@ -78,29 +79,10 @@ const [before] = postsBefore.sort(
           <Content />
         </div>
 
-        <div
-          class="flex flex-row w-full mt-8 font-normal text-4xl justify-between"
-        >
-          <div>
-            {
-              before && (
-                <NavLink to={`/post/${before.slug}`} rel="next">
-                  Next
-                </NavLink>
-              )
-            }
-          </div>
-
-          <div>
-            {
-              after && (
-                <NavLink to={`/post/${after.slug}`} rel="prev">
-                  Previous
-                </NavLink>
-              )
-            }
-          </div>
-        </div>
+        <Pagination
+          next={before ? `/post/${before.slug}` : undefined}
+          previous={after ? `/post/${after.slug}` : undefined}
+        />
       </div>
     </div>
   </div>
