@@ -1,6 +1,10 @@
 <template>
-  <nav class="bg-gray-200 dark:bg-gray-800 h-fit min-w-fit rounded lg:sticky top-4 flex flex-col mb-8">
-    <a class="px-4 py-2 block hover:bg-gray-300 hover:dark:bg-gray-700"
+  <nav class="bg-gray-200 dark:bg-gray-800 h-fit min-w-fit rounded-md lg:sticky top-8 flex flex-col mb-8 py-2">
+    <p class="px-4 py-2 font-bold text-lg">
+      Contents
+    </p>
+
+    <a class="px-4 py-2 block underline hover:no-underline"
        v-for="heading in headings"
        :key="heading.slug"
        :href="`#${heading.slug}`">
