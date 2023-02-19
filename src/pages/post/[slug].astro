@@ -1,6 +1,5 @@
 ---
-import NameBanner from "@components/NameBanner.astro";
-import NavLink from "@components/NavLink.vue";
+import Navbar from "@components/Navbar.astro";
 import Pagination from "@components/Pagination.astro";
 import TableOfContents from "@components/TableOfContents.vue";
 import Tags from "@components/Tags.vue";
@@ -53,7 +52,7 @@ const [before] = postsBefore.sort(
 
 <DefaultLayout title={title} description={description}>
   <div class="my-8">
-    <NameBanner />
+    <Navbar />
 
     <div class="mt-8">
       <div class="my-8">

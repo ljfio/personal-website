@@ -1,5 +1,4 @@
 ---
-import NameBanner from "@components/NameBanner.astro";
 import NavLink from "@components/NavLink.vue";
 import DefaultLayout from "@layouts/Default.astro";
 
@@ -9,6 +8,7 @@ import moment from "plugins/moment";
 
 import * as profile from "@pages/_resume/profile.md";
 import achievements from "@pages/_resume/achievements.json";
+import Navbar from "@components/Navbar.astro";
 
 const ProfileContent = profile.Content;
 
@@ -21,7 +21,7 @@ const sortedExperiences = experiences.sort(
 
 <DefaultLayout title="Resume">
   <div class="my-8">
-    <NameBanner />
+    <Navbar />
 
     <div class="mt-8">
       <h1 class="font-bold text-5xl lg:text-6xl">

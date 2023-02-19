@@ -1,7 +1,6 @@
 ---
 import ArticleLink from "@components/ArticleLink.astro";
-import NameBanner from "@components/NameBanner.astro";
-import NavLink from "@components/NavLink.vue";
+import Navbar from "@components/Navbar.astro";
 import Pagination from "@components/Pagination.astro";
 import DefaultLayout from "@layouts/Default.astro";
 
@@ -56,7 +55,7 @@ const titleTemplate = (n: number) => (n > 1 ? `Page ${n} - ` : "") + `Tag - ${ta
 
 <DefaultLayout title={titleTemplate(number)}>
   <div class="my-8">
-    <NameBanner />
+    <Navbar />
 
     <div class="mt-8">
       <h1 class="font-bold text-5xl lg:text-6xl">

@@ -1,0 +1,29 @@
+---
+import NameBanner from "./NameBanner.astro";
+import NavMenu from "./NavMenu.vue";
+
+const links = [
+    {
+        label: 'Home',
+        url: '/',
+    },
+    {
+        label: 'Resume',
+        url: '/resume',
+    },
+    {
+        label: 'Blog',
+        url: '/blog'
+    }
+]
+---
+
+<div class="flex flex-row">
+    <div class="flex-grow">
+        <NameBanner />
+    </div>
+
+    <div class="">
+        <NavMenu links={links} client:only />
+    </div>
+</div>

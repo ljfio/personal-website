@@ -1,17 +1,15 @@
 ---
-import NameBanner from "@components/NameBanner.astro";
-import NavLink from "@components/NavLink.vue";
+import Navbar from "@components/Navbar.astro";
 import DefaultLayout from "@layouts/Default.astro";
 ---
 <DefaultLayout title="404 - Not Found" description="Not Found">
   <div class="my-8">
-    <NameBanner />
+    <Navbar />
 
     <div class="mt-8">
-      <div class="font-normal text-4xl">
-        <NavLink to="/">/</NavLink>
+      <h1 class="font-normal text-5xl lg:text-6xl">
         <span>404</span>
-      </div>
+      </h1>
 
       <div
         class="my-32 text-gray-300 dark:text-gray-700 text-6xl font-light italic"
