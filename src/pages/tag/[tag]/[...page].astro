@@ -33,7 +33,11 @@ export async function getStaticPaths({ paginate }) {
     }, new Map<string, Array<CollectionEntry<"articles">>>());
 
   return [...map].map(([tag, posts]) => {
-    return paginate(posts, {
+    const sorted = posts.sort(
+      (a, b) => b.data.published.getTime() - a.data.published.getTime()
+    );
+
+    return paginate(sorted, {
       params: { tag },
       pageSize: limit,
     });
