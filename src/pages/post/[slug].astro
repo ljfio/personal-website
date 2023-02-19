@@ -54,7 +54,7 @@ const [before] = postsBefore.sort(
   <div class="my-8">
     <Navbar />
 
-    <div class="mt-8">
+    <article class="mt-8">
       <div class="my-8">
         <div class="flex flex-col space-y-2">
           <h1 class="font-bold text-5xl lg:text-6xl">{title}</h1>
@@ -87,6 +87,6 @@ const [before] = postsBefore.sort(
           previous={after ? `/post/${after.slug}` : undefined}
         />
       </div>
-    </div>
+    </article>
   </div>
 </DefaultLayout>
