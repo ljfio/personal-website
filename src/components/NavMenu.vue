@@ -2,7 +2,7 @@
   <nav class="menu">
     <div class="menu-button">
       <a href="#"
-         :on-click="openMenu">
+         v-on:click="toggleMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -40,33 +40,35 @@ const dropdownClass = computed(() =>
   open.value ? 'block' : 'hidden'
 );
 
-const openMenu = (e: MouseEvent) => {
+const toggleMenu = (e: MouseEvent) => {
   open.value = !open.value;
-}
+};
 
 const { links } = props;
 </script>
 
 <style lang="postcss">
 nav.menu {
+  @apply relative;
+
   .menu-button {
     a {
       @apply py-4 px-4 bg-gray-200 dark:bg-gray-800 rounded-lg flex flex-col space-y-2;
 
       span {
-        @apply bg-gray-900 dark:bg-gray-100 h-0.5 w-8 block;
+        @apply bg-gray-900 dark:bg-gray-100 h-0.5 w-6 block;
       }
     }
   }
 
   .menu-dropdown {
-    @apply absolute right-0 top-0 left-0;
+    @apply absolute right-0 mt-4 rounded-lg bg-gray-200 dark:bg-gray-800;
 
     .menu-links {
-      @apply flex flex-col;
+      @apply flex flex-col py-2;
 
       a {
-        @apply block w-24 py-2 px-4 bg-gray-200 dark:bg-gray-800;
+        @apply block py-2 px-4 underline hover:no-underline;
       }
     }
   }
