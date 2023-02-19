@@ -76,7 +76,7 @@ const [before] = postsBefore.sort(
           </div>
 
           <div class="col-span-3">
-            <div class="prose prose-neutral dark:prose-invert max-w-none">
+            <div class="prose prose-neutral dark:prose-invert max-w-none article">
               <Content />
             </div>
           </div>
@@ -90,3 +90,35 @@ const [before] = postsBefore.sort(
     </article>
   </div>
 </DefaultLayout>
+
+<style is:global>
+  .article {
+
+    & :is(:where(h1, h2, h3, h4, h5, h6)) {
+      &:hover {
+        .link {
+          @apply inline;
+        }
+      }
+      & .link {
+        @apply text-gray-600 dark:text-gray-400 hidden ml-2 hover:no-underline print:hidden;
+      }
+    }
+  }
+</style>
+
+<script>
+  const headings = document.querySelectorAll(
+    ".article :is(:where(h1, h2, h3, h4, h5, h6))"
+  );
+
+  headings.forEach((h) => {
+    const link = document.createElement("a");
+
+    link.innerHTML = "#";
+    link.className = "link";
+    link.href = `#${h.id}`;
+
+    h.appendChild(link);
+  });
+</script>
