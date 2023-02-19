@@ -29,7 +29,7 @@ const sortedExperiences = experiences.sort(
         <span>Resume</span>
       </div>
 
-      <div class="mt-8 space-y-8 content">
+      <div class="mt-8 space-y-8 prose prose-neutral dark:prose-invert max-w-none resume">
         <div>
           <h1>Profile</h1>
 
@@ -45,19 +45,19 @@ const sortedExperiences = experiences.sort(
               const role = post.data;
 
               return (
-                <div class="my-6">
-                  <div class="text-2xl">
+                <div>
+                  <h2>
                     {role.title} at {role.company}
-                  </div>
+                  </h2>
 
-                  <div class="text-sm text-gray-600 dark:text-gray-400">
+                  <div class="text-gray-600 dark:text-gray-400">
                     {moment(role.start).format("MMMM YYYY")} -
                     {role.finish
                       ? moment(role.finish).format("MMMM YYYY")
                       : "Present"}
                   </div>
 
-                  <div class="render-content">
+                  <div>
                     <Content />
                   </div>
                 </div>
@@ -71,7 +71,7 @@ const sortedExperiences = experiences.sort(
           {
             achievements.map((achievement) => (
               <div class="my-6">
-                <div class="text-2xl">{achievement.title}</div>
+                <h2>{achievement.title}</h2>
                 <div>{achievement.description}</div>
               </div>
             ))
@@ -85,3 +85,9 @@ const sortedExperiences = experiences.sort(
     </div>
   </div>
 </DefaultLayout>
+
+<style>
+  .resume {
+    @apply leading-tight prose-headings:mt-6 prose-headings:mb-2 prose-p:m-0;
+  }
+</style>
