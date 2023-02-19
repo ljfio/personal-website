@@ -41,6 +41,7 @@ const dropdownClass = computed(() =>
 );
 
 const toggleMenu = (e: MouseEvent) => {
+  e.preventDefault();
   open.value = !open.value;
 };
 
