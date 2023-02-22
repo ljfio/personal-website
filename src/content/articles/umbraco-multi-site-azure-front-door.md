@@ -91,6 +91,11 @@ This file needs to be placed into the the `/site/` folder (one level up from the
 </configuration>
 ```
 
+## Additional Note
+
+When using Azure App Service with multiple [Deployment Slots][deployment-slot] be sure to place the `applicationHost.xdt` into each slot!
+
 [front-door-headers]: https://learn.microsoft.com/en-us/azure/frontdoor/front-door-http-headers-protocol#from-the-front-door-to-the-backend
 [asp-net-core-forwarded-headers]: https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/proxy-load-balancer
 [xdt-transforms]: https://github.com/projectkudu/kudu/wiki/Xdt-transform-samples#add-an-allowedservervariables
+[deployment-slot]: https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots
