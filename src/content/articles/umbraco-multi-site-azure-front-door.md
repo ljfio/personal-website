@@ -41,7 +41,11 @@ It was clear that the `Host` was not being replaced with the value in `X-Forward
 
 The way that Azure hosts ASP .NET Core sites, specifically when using a Windows based App Service, the sites hosting model can be configured to run `InProcess` or `OutOfProcess`.
 
-When running in `InProcess` IIS is repsonsible for routing requests and controlling the headers returned in the HTTP request. With `OutOfProcess` the site is launched using the `dotnet`  command and exists as a sub-process with HTTP traffic being sent to the launched Kestrel web server.
+When running in `InProcess` IIS is repsonsible for routing requests and controls the way that headers are processed in the HTTP request.
+
+With `OutOfProcess` the site is launched using the `dotnet`  command and exists as a sub-process with HTTP traffic being sent to the launched Kestrel web server.
+
+In our instance, we were hosting ASP .NET Core `InProcess` negating the work that the `ForwardedHeadersMiddleware` was doing.
 
 ## Actual Solution
 
