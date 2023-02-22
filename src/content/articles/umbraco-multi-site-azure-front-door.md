@@ -76,14 +76,14 @@ This file needs to be placed into the the `/site/` folder (one level up from the
 ```xml
 <?xml version="1.0"?>
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-	<system.applicationHost>
-  	<rewrite>
-    	<allowedServerVariables xdt:Transform="Replace">
-      	<add name="HTTP_HOST" xdt:Transform="InsertIfMissing" />
+  <system.webServer>
+    <rewrite>
+      <allowedServerVariables>
+        <add name="HTTP_HOST" xdt:Transform="InsertIfMissing" />
         <add name="HTTP_X_FORWARDED_HOST" xdt:Transform="InsertIfMissing" />
       </allowedServerVariables>
     </rewrite>
-  </system.applicationHost>
+  </system.webServer>
 </configuration>
 ```
 
