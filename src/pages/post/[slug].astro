@@ -43,8 +43,8 @@ const openGraph: OpenGraph = {
     url: '',
     alt: ''
   },
-  url: Astro.request.url,
-}
+  url: Astro.request.url
+};
 
 const postsAfter = await getCollection("articles", ({ data }) => {
   return data.published.getTime() < post.data.published.getTime();

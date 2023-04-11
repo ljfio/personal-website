@@ -10,7 +10,7 @@ import { CollectionEntry, getCollection } from "astro:content";
 export async function getStaticPaths({ paginate }) {
   const limit = 5;
 
-  const posts = await getCollection("articles");
+  const posts = await getCollection("articles", e => !e.data.archive);
 
   const sorted = posts.sort(
     (a, b) => b.data.published.getTime() - a.data.published.getTime()

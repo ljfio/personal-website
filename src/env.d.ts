@@ -1,4 +1,6 @@
+/// <reference types="@astrojs/client" />
 /// <reference types="@astrojs/image/client" />
+/// <reference path="../.astro/types.d.ts" />
 
 interface ImportMetaEnv {
     readonly GITHUB_SHA: string;
