@@ -24,7 +24,7 @@ export default {
       return this.$props.to ?? this.$props.href;
     },
     target() {
-      return this.$props.to !== undefined ? "_self" : "_blank";
+      return this.$props.to !== undefined ? undefined : "_blank";
     }
   }
 };
