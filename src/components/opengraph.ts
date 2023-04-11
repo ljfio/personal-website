@@ -12,9 +12,16 @@ export interface OpenGraphImage {
     alt: string;
 }
 
+export interface OpenGraphLocale {
+    default: string;
+    alternates?: string[];
+}
+
 export interface OpenGraph {
     title: string;
     type: OpenGraphType;
     image: OpenGraphImage;
     url: string;
+    description?: string;
+    locale?: OpenGraphLocale;
 }
