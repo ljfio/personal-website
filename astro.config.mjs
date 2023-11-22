@@ -16,9 +16,6 @@ import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
-import image from "@astrojs/image";
-
-// https://astro.build/config
 export default defineConfig({
   build: {
     format: 'file'
@@ -37,9 +34,6 @@ export default defineConfig({
     vue(),
     tailwind(),
     prefetch(),
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp'
-    }),
     compress({
       html: {
         collapseWhitespace: true,

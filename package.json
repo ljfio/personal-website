@@ -1,9 +1,9 @@
 {
   "name": "personal-website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "engines": {
-    "node": "^16.12"
+    "node": "^20"
   },
   "scripts": {
     "dev": "astro dev",
@@ -13,18 +13,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.14.0",
-    "@astrojs/prefetch": "^0.1.2",
-    "@astrojs/sitemap": "^1.0.1",
-    "@astrojs/tailwind": "^3.0.1",
-    "@astrojs/vue": "^2.0.1",
-    "astro": "^2.1.4",
-    "astro-compress": "^1.1.29",
+    "@astrojs/prefetch": "^0.4.1",
+    "@astrojs/sitemap": "^3.0.3",
+    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/vue": "^3.0.4",
+    "astro": "^3.5.7",
+    "astro-compress": "^2.2.3",
     "moment": "^2.29.4",
-    "moment-timezone": "^0.5.40",
-    "sharp": "^0.31.3",
-    "tailwindcss": "^3.0.24",
-    "vue": "^3.2.30"
+    "moment-timezone": "^0.5.43",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.3.5",
+    "vue": "^3.3.8"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9"
