@@ -79,7 +79,7 @@ const [before] = postsBefore.sort(
           <Tags tags={tags} />
 
           <p class="text-gray-500">
-            <TimeSince date={published} client:load />
+            <TimeSince date={published} client:only />
           </p>
         </div>
       </div>
