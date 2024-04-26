@@ -8,7 +8,7 @@ const commit_ref = commit_sha.substring(0, 7);
 const commit_url = `${import.meta.env.GITHUB_SERVER_URL}/${import.meta.env.GITHUB_REPOSITORY}/commit/${commit_sha}`;
 ---
 
-<div class="mt-24 mb-8 flex flex-row">
+<div class="mt-24 mb-8 flex flex-col sm:flex-row gap-4">
   <div class="flex-grow text-gray-500 font-light ">
 
     &copy; {year} &bull;
@@ -16,7 +16,7 @@ const commit_url = `${import.meta.env.GITHUB_SERVER_URL}/${import.meta.env.GITHU
     <a target="_blank" href={commit_url}>{commit_ref}</a>
   </div>
 
-  <ul class="flex flex-row list-none gap-6 text-xl">
+  <ul class="flex flex-col sm:flex-row list-none gap-2 sm:gap-6 text-xl">
     {
       socials.map(({ link, title }) => (
         <li>
