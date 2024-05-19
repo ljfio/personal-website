@@ -1,8 +1,19 @@
 ---
+import ArticleLink from "@components/ArticleLink.astro";
 import NavLink from "../components/NavLink.vue";
 import DefaultLayout from "../layouts/Default.astro";
 
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("articles", (e) => !e.data.archive);
+
+const sorted = posts.sort(
+  (a, b) => b.data.published.getTime() - a.data.published.getTime(),
+);
+
+const latest = sorted.slice(0, 3);
+
 const imageUrl =
   "//s.gravatar.com/avatar/8bf98d1d6ea81a5e467b030a5a0b4798.jpg?s=512";
 ---
@@ -10,7 +21,7 @@ const imageUrl =
 <DefaultLayout
   description="Luke Fisher is a software engineer living and working in Scotland"
 >
-  <div class="mt-16 lg:my-40">
+  <div class="mb-16 lg:my-32">
     <div
       class="flex flex-col md:flex-row-reverse gap-x-16 gap-y-12 md:items-center"
     >
@@ -31,12 +42,32 @@ const imageUrl =
 
         <h1 class="text-7xl lg:text-8xl font-semibold">Luke Fisher</h1>
 
-        <div
-          class="text-3xl lg:text-4xl text-gray-500 italic"
-        >
+        <div class="text-3xl lg:text-4xl text-gray-500 italic">
           Software Engineer
         </div>
       </div>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-5xl text-white">
+      <a class="underline hover:no-underline" href="/blog">
+        Latest Articles
+      </a>
+    </h2>
+
+    <div class="my-16">
+      {
+        latest.map(({ data, slug }) => (
+          <ArticleLink
+            slug={slug}
+            title={data.title}
+            description={data.description}
+            tags={data.tags}
+            published={data.published}
+          />
+        ))
+      }
     </div>
   </div>
 </DefaultLayout>
