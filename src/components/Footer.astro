@@ -9,18 +9,36 @@ const commit_url = `${import.meta.env.GITHUB_SERVER_URL}/${import.meta.env.GITHU
 ---
 
 <div class="mt-24 mb-8 flex flex-col-reverse sm:flex-row gap-6">
-  <div class="flex-grow text-gray-500 font-light ">
+  <div class="flex-grow text-gray-500 font-light">
+    &copy; {year}
 
-    &copy; {year} &bull;
+    &bull; Luke Fisher &bull;
 
-    <a target="_blank" href={commit_url}>{commit_ref}</a>
+    <a
+      class="underline hover:no-underline"
+      target="_blank"
+      href="https://creativecommons.org/licenses/by/4.0/"
+    >
+      CC BY 4.0
+    </a>
+
+    &bull;
+
+    <a class="underline hover:no-underline" target="_blank" href={commit_url}
+      >{commit_ref}</a
+    >
   </div>
 
   <ul class="flex flex-col sm:flex-row list-none gap-2 sm:gap-6 text-xl">
     {
       socials.map(({ link, title }) => (
         <li>
-          <a href={link} rel="me" class="underline hover:no-underline" target="_blank">
+          <a
+            href={link}
+            rel="me"
+            class="underline hover:no-underline"
+            target="_blank"
+          >
             {title}
           </a>
         </li>
