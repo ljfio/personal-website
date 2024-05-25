@@ -13,7 +13,7 @@ const {next, previous} = Astro.props;
   <div>
     {
       previous && (
-        <NavLink to={previous} rel="prev">
+        <NavLink to={previous} rel="prev" prefetch={true}>
           Previous
         </NavLink>
       )
@@ -23,7 +23,7 @@ const {next, previous} = Astro.props;
   <div>
     {
       next && (
-        <NavLink to={next} rel="next">
+        <NavLink to={next} rel="next" prefetch={true}>
           Next
         </NavLink>
       )

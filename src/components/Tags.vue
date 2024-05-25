@@ -4,7 +4,8 @@
     <a class="px-2 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 hover:dark:bg-gray-700 rounded"
        v-for="tag in tags"
        :key="tag"
-       :href="`/tag/${tag}`">
+       :href="`/tag/${tag}`"
+       data-astro-prefetch>
       {{ tag }}
     </a>
   </div>

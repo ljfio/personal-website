@@ -16,7 +16,7 @@ const {slug, title, description, tags, published} = Astro.props;
 
 <div class="my-8 flex flex-col space-y-2">
     <h2 class="text-4xl">
-      <NavLink to={`/post/${slug}`}>{title}</NavLink>
+      <NavLink to={`/post/${slug}`} prefetch={true}>{title}</NavLink>
     </h2>
 
     <p class="text-lg italic">{description}</p>

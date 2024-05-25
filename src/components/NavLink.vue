@@ -2,6 +2,7 @@
   <a :href="location"
      :rel="rel"
      :target="target"
+     :data-astro-prefetch="prefetch ? '' : undefined"
      class="
      text-gray-600
      dark:text-gray-400
@@ -18,6 +19,7 @@ export default {
     to: String,
     href: String,
     rel: String,
+    prefetch: Boolean
   },
   computed: {
     location() {
