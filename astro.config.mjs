@@ -9,6 +9,11 @@ export default defineConfig({
   build: {
     format: 'file'
   },
+  image: {
+    domains: [
+      "s.gravatar.com"
+    ]
+  },
   site: 'https://ljf.io',
   markdown: {
     shikiConfig: {
