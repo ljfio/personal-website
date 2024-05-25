@@ -13,12 +13,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/prefetch": "^0.4.1",
-    "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.2",
-    "@astrojs/vue": "^3.0.4",
-    "astro": "^3.5.7",
-    "astro-compress": "^2.2.3",
+    "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vue": "^4.3.0",
+    "astro": "^4.9.1",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
     "sharp": "^0.32.6",

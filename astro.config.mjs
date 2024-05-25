@@ -10,12 +10,6 @@ import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-import compress from "astro-compress";
-
-// https://astro.build/config
-import prefetch from "@astrojs/prefetch";
-
-// https://astro.build/config
 export default defineConfig({
   build: {
     format: 'file'
@@ -26,21 +20,13 @@ export default defineConfig({
       theme: 'github-dark-dimmed'
     }
   },
+  prefetch: true,
   integrations: [
     sitemap({
       changefreq: 'monthly',
       lastmod: new Date(),
     }),
     vue(),
-    tailwind(),
-    prefetch(),
-    compress({
-      html: {
-        collapseWhitespace: true,
-        preserveLineBreaks: true,
-        keepClosingSlash: true,
-        removeComments: true
-      }
-    })
+    tailwind()
   ]
 });
