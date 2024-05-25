@@ -24,6 +24,6 @@ const {slug, title, description, tags, published} = Astro.props;
     <Tags tags={tags} />
 
     <p class="text-gray-500">
-      <TimeSince date={published} client:only />
+      <TimeSince date={published} client:only="vue" />
     </p>
   </div>
