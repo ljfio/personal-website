@@ -7,7 +7,7 @@ tags: ['dotnet', 'aspnet', 'umbraco']
 
 When building Umbraco websites recently, instead of calling the `GetBlockListHtmlAsync()` extension method on an `IHtmlHelper`, we have been experimenting with the use of a `ViewComponent` to render out each of the content blocks built for a site.
 
-This approach requires an additional step to wire up the `ViewContext` which is a holding key pieces of information (such as the `ViewBag` and `ViewData`) for the currently rendering `ViewComponent`.
+This approach requires an additional step to wire up the `ViewContext` which is holding key pieces of information (such as the `ViewBag` and `ViewData`) for the currently rendering `ViewComponent`.
 
 Whenever you programmatically call a method like `PartialAsync()` the `IHtmlHelper` must be made aware of its currently executing `ViewContext`.
 
