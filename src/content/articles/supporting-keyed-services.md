@@ -1,7 +1,7 @@
 ---
 title: Supporting Keyed Services
 description: Choosing the correct properties to open
-published: 2024-08-10 09:24:10
+published: 2024-08-10T09:24:10+01:00
 tags: ['dotnet']
 ---
 
