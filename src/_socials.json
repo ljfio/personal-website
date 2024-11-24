@@ -2,31 +2,21 @@
     {
         "link": "https://github.com/ljfio",
         "title": "GitHub",
-        "icon": "fa-github"
+        "icon": "fa-brands fa-github"
     },
     {
         "link": "https://linkedin.com/in/ljfio",
         "title": "LinkedIn",
-        "icon": "fa-linkedin"
+        "icon": "fa-brands fa-linkedin"
     },
     {
-        "link": "https://twitter.com/ljf_io",
-        "title": "Twitter",
-        "icon": "fa-twitter"
+        "link": "https://ljfio.bsky.social",
+        "title": "Bluesky",
+        "icon": "fa-brands fa-bluesky"
     },
     {
         "link": "https://dotnet.social/@ljfio",
         "title": "Mastodon",
-        "icon": "fa-mastodon"
-    },
-    {
-        "link": "https://instagram.com/ljfio/",
-        "title": "Instagram",
-        "icon": "fa-instagram"
-    },
-    {
-        "link": "mailto:hello@ljf.io",
-        "title": "Email",
-        "icon": "fa-envelope"
+        "icon": "fa-brands fa-mastodon"
     }
 ]
