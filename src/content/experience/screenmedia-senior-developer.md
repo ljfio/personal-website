@@ -1,11 +1,17 @@
 ---
 title: Senior Developer
-company: Screenmedia
+company: Screenmedia, a Waracle Company
 start: 2022-10
 ---
 
-Responsible for leading development and delivery of APIs, backend integrations and the extension of Umbraco solutions through custom plugins.
+Responsible for leading software development and delivery of .NET backend solutions, whilst mentoring junior team members.
 
-Delivered start-to-finish solutions using Microsoft Azure, deploying infrastructure via Bicep infrastructure as code templates and Azure DevOps pipelines.
+Architected highly available websites and APIs using Microsoft Azure meeting customer RTO, RPO and uptime requirements.
 
-Key driver in our internal strategic initiatives to improve Developer Experience (DX), including relaunching of Inner-Source.
+Designed and built scalable serverless API using Azure API Management and Functions. Integrating with AI Cognitive Search for fast data querying, retrieval and indexing of documents.
+
+Lead the migration and upgrade of various Umbraco 7 and 8 solutions to the version the latest LTS release.
+
+Key driver in our internal strategic initiatives to improve Developer Experience (DX), through modularisation and reusability via Inner-Sourcing.
+
+Moved to Waracle as part of the acquisition of Screenmedia.
