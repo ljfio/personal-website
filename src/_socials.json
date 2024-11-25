@@ -10,13 +10,13 @@
         "icon": "fa-brands fa-linkedin"
     },
     {
-        "link": "https://ljfio.bsky.social",
-        "title": "Bluesky",
-        "icon": "fa-brands fa-bluesky"
-    },
-    {
         "link": "https://dotnet.social/@ljfio",
         "title": "Mastodon",
         "icon": "fa-brands fa-mastodon"
+    },
+    {
+        "link": "https://ljfio.bsky.social",
+        "title": "Bluesky",
+        "icon": "fa-brands fa-bluesky"
     }
 ]
