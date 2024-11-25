@@ -6,7 +6,7 @@ Accomplished Software Engineer specialising in open-source, cloud and Microsoft 
 
 Architected and developed bespoke solutions within enterprises and in software house environments.
 
-Certified in cloud development as an [AWS Developer Associate][aws_da] and [Azure Developer Associate][ms_ada].
+Certified in cloud development as an [AWS Developer Associate][aws_da], [Azure Developer Associate][ms_ada] and [Kubernetes Administrator][cka].
 
 Delivered software for multiple form-factors (desktop, tablet and mobile) using a range of frameworks (WPF / UWP / Xamarin).
 
@@ -14,3 +14,4 @@ Experienced in full-stack web development including the use of modern JavaScript
 
 [ms_ada]: https://learn.microsoft.com/api/credentials/share/en-gb/ljfio/148632BAB118D454
 [aws_da]: https://www.credly.com/badges/4a675941-3c8a-4ce8-a913-ec9b6a283581/public_url
+[cka]: https://www.credly.com/badges/1a340d14-6b14-41e7-b3be-92e5f38cf0f5/public_url
