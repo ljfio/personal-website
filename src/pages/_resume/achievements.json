@@ -15,6 +15,11 @@
         "description": "AWS Developer Associate"
     },
     {
+        "slug": "kubernetes",
+        "title": "Kubernetes Certification",
+        "description": "Certified Kubernetes Administrator (CKA)"
+    },
+    {
         "slug": "conocophillips",
         "title": "ConocoPhillips Award for Academic Excellence",
         "description": "Attained at RGU for both Year 1 and 2"
