@@ -7,7 +7,8 @@ tags: ['umbraco', 'testing', 'bdd']
 
 Previously I wrote a [24 Days in Umbraco][24-days-article] article on how to test your Umbraco solutions with [SpecFlow][specflow-archived], a free open-source Behaviour Driven Development (BDD) framework.
 
-Unfortunately, as of 31st December 2024, SpecFlow was made end of life by Tricentis making my article obsolete. How fast things change in the .NET ecosystem these days!
+Unfortunately, as of 31st December 2024, SpecFlow was made [end of life][specflow-eol] by Tricentis making my article obsolete.
+How fast things change in the .NET ecosystem these days!
 
 If I was looking to add BDD testing to my Umbraco solution today, how would I do it?
 
