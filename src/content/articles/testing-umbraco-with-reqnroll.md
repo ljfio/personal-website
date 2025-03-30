@@ -1,6 +1,6 @@
 ---
 title: Testing Umbraco with Reqnroll
-description:
+description: Automated behaviour testing for your Umbraco solutions
 published: 2025-03-30T22:23:08+01:00
 tags: ['umbraco', 'testing', 'bdd']
 ---
