@@ -7,7 +7,7 @@ tags: ['ai', 'software']
 
 It has been a while since I have sat down to gather my thoughts about what it is to be a Software Engineer, especially as advancements within the last year alone have been incredibly visible.
 
-Too often do I feel I have been told by leaders in the AI space that Large Language Models (LLMs) are becoming so good that they have the capability to replace Software Engineers.
+Too often do I feel I have been told by leaders in the AI space that Large Language Models (LLMs) are becoming so good that they have the capability to [replace Software Engineers][replace-swe].
 Yet here I am, still fulfilling the role, converting business requirements into functional software.
 
 My own personal role has shifted from writing code to making technical decisions that shape the direction of the solutions we build, influencing clients and teams to build scalable forward thinking systems.
@@ -56,4 +56,5 @@ For me being a good Software Engineer was always more than turning requirements 
 
 [sdd]: https://github.github.com/spec-kit/concepts/sdd.html
 [bdd]: https://cucumber.io/docs/bdd/
+[replace-swe]: https://www.entrepreneur.com/business-news/ai-ceo-says-software-engineers-could-be-replaced-in-months/502087
 [unseen-prompts]: beware-the-unseen-problems-with-ai#the-unseen-prompts
