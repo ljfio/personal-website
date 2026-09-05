@@ -1,7 +1,7 @@
 ---
-title: A year on from "The End of Software Engineers"
+title: "The End of Software Engineers"
 description: The demise that truly hasn't arrived, yet...
-published: 2026-06-05T15:46:00+01:00
+published: 2026-09-05T15:46:00+01:00
 tags: ['ai', 'software']
 ---
 
