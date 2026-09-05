@@ -1,6 +1,6 @@
 ---
 title: '"The End of Software Engineers"'
-description: The demise that truly hasn't arrived, yet...
+description: The demise has not arrived, will it ever?
 published: 2026-09-05T15:46:00+01:00
 tags: ['ai', 'software']
 ---
@@ -22,7 +22,7 @@ I can only describe this move to AI assisted coding as an adjustable lever on a 
 
 As time has progressed, that element of gambling becomes more likely to hit jackpot on the first try: all thanks to being able to absorb more context about the challenge you face with bigger token windows, agentic approaches to fanning-out breaking down the challenge into multiple smaller steps, and using more and refined Mixture of Experts (MoE) training data to shape more powerful models for coders to use.
 
-I would caveat that what looks like a win still depends on how clear that finish line is defined, and if you had to repeat the same process how likely are you to walk the same path and achieve the same result?
+I would caveat that what looks like a win still depends on how clear that goal is defined, and if you had to repeat the same process how likely are you to walk the same path and achieve the same result?
 
 This is why I think that while specifications (through approaches like [Spec-Driven Development][sdd]) is partially the direction we are headed for the abstraction between computers and humans building software, it is not the entire solution.
 Being able to deterministically validate the criteria has been met through adopting [Behaviour-Driven Development][bdd] automated testing, mapping natural language to interactions in your system, moves that needle closer.
@@ -53,6 +53,8 @@ A barrier lowered, yet still visible to separate candidates who "get it" and tho
 What I also hope for is universal access to intelligence, something small enough to run on our own computers, not subject to export restrictions when the hot-air producing politicians in power decides to halt access.
 
 For me being a good Software Engineer was always more than turning requirements into syntax; it is thinking critically, solving problems, challenging assumptions, identifying risks, understanding dependencies, architecting for the future, articulating outcomes and desired states acutely to everyone involved.
+
+I fear we will see engineers that enjoy writing code move on when they are forced to adopt AI coding tools, but we will unlikely find a complete automated replacement for good software development.
 
 [sdd]: https://github.github.com/spec-kit/concepts/sdd.html
 [bdd]: https://cucumber.io/docs/bdd/
