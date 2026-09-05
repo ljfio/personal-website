@@ -5,16 +5,16 @@ published: 2026-09-05T15:46:00+01:00
 tags: ['ai', 'software']
 ---
 
-It has been a while since I have sat down to gather my thoughts about what it is to be a Software Engineer, especially as advancements within the last year alone have been incredibly visible.
+It has been a while since I sat down to gather my thoughts about what it is to be a Software Engineer, especially as advancements within the last year alone has been incredibly visible.
 
-Too often do I feel I have been told by leaders in the AI space that Large Language Models (LLMs) are becoming so good that they have the capability to [replace Software Engineers][replace-swe].
-Yet here I am, still fulfilling the role, converting business requirements into functional software.
+Too often we are told by leaders in the AI space that Large Language Models (LLMs) are becoming so good that they have the capability to [replace Software Engineers][replace-swe].
+Yet here we are, still fulfilling the role, converting business requirements into functional software.
 
 My own personal role has shifted from writing code to making technical decisions that shape the direction of the solutions we build, influencing clients and teams to build scalable forward thinking systems.
 Where being able to use generative AI to produce proof-of-concept (POC) work in record time has helped to demonstrate an approach to solving problems with limited procrastination on how best to showcase my thinking.
 
 In speaking to friends and colleagues (and I can include myself in this), the reason we are in this industry is the joy of solving puzzles, taking pride in being able to write the syntax that takes the input and produces the correct output.
-Delegating this to a machine to solve the puzzles removes the dopamine achieved through delayed gratification seeing the fruits of our labour. I have the feeling we are all fatigued and dissatisfied with this shift.
+Delegating this to a machine to solve the puzzles removes the dopamine achieved through delayed gratification seeing the fruits of our labour. I feel we are all fatigued and dissatisfied with this shift.
 
 ## It's Stochastic, not Deterministic
 
